@@ -2,12 +2,13 @@
   <nav class="main-color">
     <div class="logo">
       <div class="logo-pic">
-        <img src="../../../assets/image/winnie.png" alt="商標" />
+        <img routerLink='home' src="../../../assets/image/winnie.png" alt="商標" />
       </div>
     </div>
     <ul>
       <li>
-        <a href="">{{ "header.about" | translate }}</a>
+
+        <a routerLink='about'>{{ "header.about" | translate }}</a>
       </li>
       <li>
         <a href="">{{ "header.portfolio" | translate }}</a>
@@ -19,12 +20,7 @@
         <a href="">{{ "header.contact" | translate }}</a>
       </li>
       <li>
-        <select
-          name=""
-          id=""
-          (change)="changeLanguage()"
-          [(ngModel)]="language"
-        >
+        <select name="" id="" (change)="changeLanguage()" [(ngModel)]="language">
           <option value="zh-TW">中文</option>
           <option value="en-US">英文</option>
         </select>

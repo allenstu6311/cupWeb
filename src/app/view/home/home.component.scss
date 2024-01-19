@@ -1,0 +1,65 @@
+@import "../../../assets/scss/common.scss";
+
+.open-animation {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    z-index: 100;
+    transition: .5s;
+    @extend %flex;
+    flex-wrap: wrap;
+
+    &> .loading-content{
+        display: inline-block;
+        &>svg {
+            width: 400px;
+            height: 300px;
+    
+            &>path {
+                stroke: #ff0000;
+                stroke-dasharray: 1000;
+                stroke-dashoffset: 1000;
+                animation: draw-line 2s linear forwards;
+                transition: .5s;
+            }
+        }
+    }
+
+ 
+
+    @keyframes draw-line {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+
+    .loading-text{
+        text-align: left;
+        color: #000000;
+        font-size: 70px;
+        // animation: flashing 2s linear forwards;
+        transition: .5s;
+        position: relative;
+    }
+
+    // @keyframes flashing{
+    //     from{
+    //         bottom: 10px;
+    //     }
+    //     to{
+    //         top: 10px;
+    //     }
+    // }
+}
+
+.display {
+    opacity: 0;
+    z-index: -1;
+}

@@ -16,6 +16,7 @@ import { AboutComponent } from './view/about/about.component';
 //組件
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SelectComponent } from './components/select/select.component';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -28,7 +29,8 @@ export function createTranslateLoader(http: HttpClient) {
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    SelectComponent
   ],
   imports: [
     BrowserModule,

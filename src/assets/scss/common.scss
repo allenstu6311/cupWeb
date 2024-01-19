@@ -1,5 +1,14 @@
+@import "./color.scss";
+
 @mixin mobile {
     @media screen and (max-width:764px) {
         @content;
     }
 }
+
+%flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

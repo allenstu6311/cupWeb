@@ -1,48 +1,54 @@
-@import "../../../assets/scss/color.scss";
+@import "../../../assets/scss/common.scss";
 
 header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: $mainColor;
+  background-color: $color1;
 
-  & > .logo {
-    
+  &>.logo {
 
-    & > .logo-pic {
+
+    &>.logo-pic {
       width: 200px;
       padding: 5px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
+      @extend %flex;
+     
       img {
         width: 80%;
         height: 80%;
-        object-fit:cover;
+        object-fit: cover;
       }
     }
   }
 
-  & > ul {
+  &>ul {
     display: flex;
     align-items: center;
     justify-content: space-around;
 
     li {
       padding: 15px;
+
       &>a {
         font-size: 16px;
-        color: #fff;
+        color: $color3;
       }
 
-      &>select{
+      &>select {
         width: 150px;
         text-align: center;
         padding: 10px;
-        border-radius: 100px;
+        // border-radius: 100px;
         border: none;
         font-size: 16px;
+
+        & > select option {
+          display: block;
+          padding: 5px 0;
+          text-align: center;
+          font-size: 24px;
+        }
       }
     }
   }
