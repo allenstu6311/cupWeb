@@ -1,0 +1,6 @@
+ng g c components/header
+
+ng g c view/about
+
+
+ng g service service/language

@@ -1,0 +1,49 @@
+@import "../../../assets/scss/color.scss";
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $mainColor;
+
+  & > .logo {
+    
+
+    & > .logo-pic {
+      width: 200px;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 80%;
+        height: 80%;
+        object-fit:cover;
+      }
+    }
+  }
+
+  & > ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    li {
+      padding: 15px;
+      &>a {
+        font-size: 16px;
+        color: #fff;
+      }
+
+      &>select{
+        width: 150px;
+        text-align: center;
+        padding: 10px;
+        border-radius: 100px;
+        border: none;
+        font-size: 16px;
+      }
+    }
+  }
+}
