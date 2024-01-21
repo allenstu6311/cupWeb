@@ -3,14 +3,58 @@
 @import "./assets/scss/common.scss";
 @import "./assets/scss/color.scss";
 
-*{
+* {
     text-decoration: none;
 }
 
-body{
+body {
     background-color: #FFFFFF;
 }
 
-.bold{
+.bold {
     font-weight: bold;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+h1 {}
+
+h2 {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 33px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size:18px;
+    font-weight: bold;
+}
+
+section{
+    width: 90%;
+    margin-bottom: 100px;
+    max-width: 1600px;
+    margin: auto;
+}
+
+section.banner{
+    width: 100%;
+    max-width: unset;
+    border:none;
+    margin-bottom: 100px;
+    padding: 0;
+}
+
+.line{
+    border-bottom:2px gray dashed;
+    margin:100px auto;
+    width: 80%;
 }

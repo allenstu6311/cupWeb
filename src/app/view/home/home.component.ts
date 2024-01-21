@@ -14,17 +14,11 @@ export class HomeComponent {
   display: boolean = false;
 
   constructor(){
-    timer(3000).subscribe(() => {
-      this.path.nativeElement.style.fill = '#ff0000';
-      timer(1000).subscribe(()=>{
-        this.text.nativeElement.style.color = '#fff';
-
-        timer(1000).subscribe(() => {
-          this.display = true;
-        });
-      })
-    
-     
+    timer(2500).subscribe(() => {
+      this.path.nativeElement.style.fill = '#fcd752';
+      timer(1000).subscribe(() => {
+        this.display = true;
+      });
     });
   }
 

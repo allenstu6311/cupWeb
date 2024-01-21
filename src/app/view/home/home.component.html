@@ -1,16 +1,85 @@
-<div class="open-animation" #openAnimation [class.display]="display">
+<!-- <div class="open-animation" #openAnimation [class.display]="display">
     <div class="loading-content">
-        <svg version="1.1">
-            <path fill="transparent" stroke="#888888" stroke-width="1" #path
-                d="M171.924,67.854C129.466-27.156,8.777-4.987,7.982,105.285c-0.44,60.564,57.469,83.2,96.026,107.414,37.388,23.481,64,55.6,68.167,69.275,3.57-13.4,33.208-46.427,67.817-69.932,37.842-25.7,96.466-46.852,96.026-107.415C335.219-5.919,212.431-23.366,171.924,67.854Z">
-            </path>
+        <svg  #path fill="transparent" stroke="#888888" stroke-width="1" version="1.1" id="path"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+            viewBox="0 0 400 400" xml:space="preserve">
+            <path d="M381.58,122.25c-19.83-24.07-59.77-21.77-76.23-19.61c0.3-24.18,0.47-36.96,0.48-37.28l0.04-3.04H22.76v235.9
+	c0,19.14,6.81,35.51,20.23,48.67c29.21,28.63,85.2,36.13,116.4,36.13c1.26,0,2.48-0.01,3.65-0.04c7.16-0.14,44.66-1.52,79.8-14.68
+	c39.17-14.67,60.05-38.89,60.36-70.06c0.05-5,0.1-9.93,0.15-14.78c8.98-0.85,17.49-3.02,25.34-6.51
+	c29.48-13.11,54.36-46.35,63.4-84.67C398.76,163.98,394.93,138.46,381.58,122.25z M304.91,139.23c7.3-1.04,33.14-3.57,44.69,10.45
+	c7.42,9.01,9.47,23.54,5.63,39.85c-5.27,22.34-20.2,42.42-37.14,49.96c-4.43,1.97-9.24,3.2-14.33,3.69
+	C304.2,201.58,304.59,166.74,304.91,139.23z M162.92,376.98c-29.35,0.57-86.77-5.99-115.73-34.38
+	c-12.23-11.99-18.43-26.92-18.43-44.39V68.32h271.03c-0.22,16.27-1.26,97.15-2.59,229.86C296.44,373.44,168.37,376.87,162.92,376.98
+	z M386.25,190.9c-8.49,36-32.6,68.37-60,80.56c-7.08,3.15-14.74,5.13-22.84,5.96c0.1-9.71,0.2-19.1,0.29-28.19
+	c5.97-0.51,11.62-1.93,16.83-4.25c18.86-8.39,34.78-29.61,40.54-54.06c4.28-18.16,1.79-34.57-6.84-45.05
+	c-12.94-15.71-38.87-14.09-49.25-12.71c0.11-9.02,0.2-17.18,0.29-24.46c12.95-1.74,53.21-5.05,71.68,17.36
+	C389.1,140.81,392.49,164.45,386.25,190.9z" />
         </svg>
-        <div class="loading-text bold" #text>
-            <p>LOADING...</p>
-        </div>
     </div>
-</div>
+</div> -->
+<div id="home">
+    <main>
+        <section class="banner">
+            <div class="banner-pic">
+                <img src="../../../assets/image/banner.png" alt="封面圖片">
+            </div>
+        </section>
 
-<section id="home" #home>
-    <main></main>
-</section>
+
+        <section class="introduce">
+            <div class="introduce-left">
+                <img src="../../../assets/image/introduce.png" alt="介紹區圖片">
+            </div>
+            <div class="introduce-right">
+                <div class="title">
+                    <div class="">
+                        <h2>{{"introduce.title.first" | translate }}</h2>
+                    </div>
+                    <!-- <div class="">
+                        <h2>{{"introduce.title.second" | translate }}</h2>
+                    </div> -->
+                </div>
+                <div class="sub-title">
+                    <div class="">
+                        <h3>{{"introduce.subTitle.first" | translate }}</h3>
+                    </div>
+                    <!-- <div class="">
+                        <h3>{{"introduce.subTitle.second" | translate }}</h3>
+                    </div> -->
+                </div>
+                <div class="content">
+                    <div class="">
+                        <p>{{"introduce.content.first" | translate }}</p>
+                    </div>
+                    <!-- <div class="">
+                        <p>{{"introduce.content.second" | translate }}</p>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <div class="line"></div>
+
+        <section class="author">
+            <h2>test</h2>
+            <div class="author-pic">
+                <div class="pic">
+                    <img src="../../../assets/image/author.jpg" alt="作者介紹" loading="lazy">
+                </div>
+
+            </div>
+            <div class="author-text">
+
+                <div class="text">
+                    <p>
+                        {{'author.text' | translate}}
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="line"></div>
+
+    </main>
+</div>

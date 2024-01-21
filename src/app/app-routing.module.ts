@@ -5,17 +5,17 @@ import { AboutComponent } from './view/about/about.component';
 
 const routes: Routes = [
   {
-    path:'',
-    children:[
-      {
-        path:'home',
-        component:HomeComponent
-      },
-      {
-        path:'about',
-        component:AboutComponent
-      },
-    ]
+    path: '',
+    redirectTo: 'home', // 將根路徑導向到 'home'
+    pathMatch: 'full' // 確保完全匹配根路徑
+  },
+  {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
   }
 ];
 

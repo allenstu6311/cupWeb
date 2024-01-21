@@ -4,5 +4,23 @@
         "portfolio":"Portfolio",
         "course":"Course",
         "contact":"Contact"
+    },
+    "introduce":{
+        "title":{
+            "first":"We are Desert Turtles,",
+            "second":"and we love to perfect every little detail."
+        },
+        "subTitle":{
+            "first":"Join us in elevating the quality of life with you,",
+            "second":"and fill your life with practical and therapeutic items."
+        },
+        "content":{
+            "first":"Desert Turtles is currently striving to improve step by step,",
+            "second":"hoping that every one of you who chooses us will genuinely like us from the bottom of your heart."
+        }
+    },
+    
+    "author": {
+        "text": "Hello~ I'm Jayna, and I'm delighted to meet you here. Desert Turtle is my first brand, and I hope it's a brand that focuses on warmth, attention to detail, and emotions. Currently, we are working towards this direction with dedication. The philosophy behind Desert Turtle is simple: we want both you, the buyer of our products, and the person receiving your gift, to 'slowly feel the warmth in your heart' when you open the box."
     }
 }
