@@ -111,7 +111,7 @@
                         line-height: 1.5;
                     }
 
-                  
+
                 }
             }
         }
@@ -120,7 +120,6 @@
     .author {
         display: flex;
 
-        // gap: 40% 60%;
         .author-pic {
             width: 50%;
 
@@ -146,4 +145,31 @@
             }
         }
     }
+
+
+    .pet {
+        .pet-pic {
+            display: flex;
+            align-items: end;
+            justify-content: space-evenly;
+
+            .pet-text {
+                margin-bottom: 10px;
+
+                p {
+                    font-size: 18px;
+                    color: #7A7A7A;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                    line-height: 2;
+                }
+            }
+
+            .pic {
+                width: 45%;
+            }
+        }
+    }
+
+
 }
