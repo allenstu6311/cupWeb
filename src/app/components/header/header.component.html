@@ -20,7 +20,8 @@
         <a href="">{{ "header.contact" | translate }}</a>
       </li>
       <li>
-        <select name="" id="" (change)="changeLanguage()" [(ngModel)]="language">
+        <label for="language">語系:</label>
+        <select name="language" id="language" (change)="changeLanguage()" [(ngModel)]="language">
           <option value="zh-TW">中文</option>
           <option value="en-US">英文</option>
         </select>

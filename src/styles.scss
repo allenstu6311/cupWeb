@@ -24,37 +24,37 @@ img {
 h1 {}
 
 h2 {
-    font-size: 38px;
+    font-size: 2.375em; /* 38px */
     font-weight: bold;
 }
 
 h3 {
-    font-size: 33px;
+    font-size: 2.0625em; /* 33px */
     font-weight: bold;
 }
 
 h4 {
-    font-size:18px;
+    font-size: 1.125em; /* 18px */
     font-weight: bold;
 }
 
-section{
+section {
     width: 90%;
-    margin-bottom: 100px;
-    max-width: 1600px;
+    margin-bottom: 6.25em; /* 100px */
+    max-width: 100em; /* 1600px */
     margin: auto;
 }
 
-section.banner{
+section.banner {
     width: 100%;
-    max-width: unset;
-    border:none;
-    margin-bottom: 100px;
+    max-width: 200em;
+    border: none;
+    margin-bottom: 6.25em; /* 100px */
     padding: 0;
 }
 
-.line{
-    border-bottom:2px gray dashed;
-    margin:80px auto;
+.line {
+    border-bottom: 2px gray dashed;
+    margin: 5em auto; /* 80px */
     width: 80%;
 }

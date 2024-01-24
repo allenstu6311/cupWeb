@@ -1,53 +1,53 @@
 @import "../../../assets/scss/common.scss";
 
+$baseFontSize: 16px;
+
 header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: $color1;
 
-  &>.logo {
-
-
-    &>.logo-pic {
-      width: 200px;
-      padding: 5px;
+  & > .logo {
+    & > .logo-pic {
+      width: 12.5em; // 200px / 16px = 12.5em
+      padding: 0.3125em; // 5px / 16px = 0.3125em
       @extend %flex;
      
       img {
-        width: 80%;
-        height: 80%;
+        width: 80%; // 80% remains unchanged
+        height: 80%; // 80% remains unchanged
         object-fit: cover;
       }
     }
   }
 
-  &>ul {
+  & > ul {
     display: flex;
     align-items: center;
     justify-content: space-around;
 
     li {
-      padding: 15px;
+      padding: 0.9375em; // 15px / 16px = 0.9375em
 
-      &>a {
-        font-size: 16px;
+      & > a {
+        font-size: 1em; // 16px / 16px = 1em
         color: $color3;
       }
 
-      &>select {
-        width: 150px;
+      & > select {
+        width: 9.375em; // 150px / 16px = 9.375em
         text-align: center;
-        padding: 10px;
-        // border-radius: 100px;
+        padding: 0.625em; // 10px / 16px = 0.625em
+        // border-radius: 6.25em; // Example, you can convert this similarly
         border: none;
-        font-size: 16px;
+        font-size: 1em; // 16px / 16px = 1em
 
         & > select option {
           display: block;
-          padding: 5px 0;
+          padding: 0.3125em 0; // 5px / 16px = 0.3125em, 0 remains unchanged
           text-align: center;
-          font-size: 24px;
+          font-size: 1.5em; // 24px / 16px = 1.5em
         }
       }
     }
