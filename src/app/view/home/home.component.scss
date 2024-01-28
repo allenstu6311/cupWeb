@@ -59,11 +59,11 @@
         @extend %flex;
         // position: relative;
 
-        &>.introduce-left {
+        &>.introduce-pic {
             width: 40%;
         }
 
-        &>.introduce-right {
+        &>.introduce-text {
             width: 60%;
             // @extend %flex;
             display: flex;
@@ -136,7 +136,7 @@
 
             p {
                 font-size: 1.125em; /* 18px */
-                color: #7A7A7A;
+                color: $color4;
                 font-weight: bold;
                 letter-spacing: 2px;
                 line-height: 2;
@@ -148,7 +148,7 @@
     .pet {
         .pet-pic {
             display: flex;
-            align-items: end;
+            align-items: flex-end;
             justify-content: space-evenly;
 
             .pet-text {
@@ -156,7 +156,7 @@
 
                 p {
                     font-size: 1.125em; /* 18px */
-                    color: #7A7A7A;
+                    color: $color4;
                     font-weight: bold;
                     letter-spacing: 2px;
                     line-height: 2;
@@ -166,6 +166,37 @@
             .pic {
                 width: 45%;
             }
+        }
+    }
+
+    .service{
+        display: flex;
+
+        &>.service-text{
+            .title{
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            width: 50%;
+            
+            .content{
+                padding: 10px;
+                line-height: 2;
+                color: $color4;
+                font-size: 14px;
+                font-weight: bold;
+
+                li{
+                    margin-bottom: 20px;
+                }
+
+                p{
+                   
+                }
+            }
+        }
+        &>.service-pic{
+            width: 50%;
         }
     }
 }

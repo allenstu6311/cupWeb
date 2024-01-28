@@ -8,6 +8,13 @@ header nav {
   align-items: center;
   background-color: $color1;
 
+  .language-label{
+    width: 0em;
+    height: 0em;
+    overflow: hidden;
+    display: block;
+  }
+
   & > .logo {
     & > .logo-pic {
       width: 12.5em; // 200px / 16px = 12.5em
