@@ -18,7 +18,7 @@ body {
 img {
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 h1 {}
@@ -55,6 +55,6 @@ section.banner {
 
 .line {
     border-bottom: 2px gray dashed;
-    margin: 5em auto; /* 80px */
+    margin: 4em auto; /* 80px */
     width: 80%;
 }
