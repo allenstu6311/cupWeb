@@ -13,11 +13,11 @@ export class HomeComponent {
   @ViewChild('openAnimation', { static: true }) openAnimation!: ElementRef;
   display: boolean = false;
   igPic:string[] = [
-    '../../../assets/image/ig/ig_1.jpg',
-    '../../../assets/image/ig/ig_2.jpg',
-    '../../../assets/image/ig/ig_3.jpg', 
-    '../../../assets/image/ig/ig_4.jpg',
-    '../../../assets/image/ig/ig_5.jpg'
+    'assets/image/ig/ig_1.jpg',
+    'assets/image/ig/ig_2.jpg',
+    'assets/image/ig/ig_3.jpg', 
+    'assets/image/ig/ig_4.jpg',
+    'assets/image/ig/ig_5.jpg'
   ]
 
   constructor(){

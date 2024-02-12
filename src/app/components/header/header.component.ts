@@ -14,11 +14,11 @@ export class HeaderComponent {
   languageList: any[] = [
     {
       name: '中文',
-      pic: '../../../assets/image/language/chinese.jpeg',
+      pic: 'assets/image/language/chinese.jpeg',
     },
     {
       name: 'English',
-      pic: '../../../assets/image/language/america.jpg',
+      pic: 'assets/image/language/america.jpg',
     },
   ];
 
