@@ -8,7 +8,7 @@ header nav {
   align-items: center;
   background-color: $color1;
 
-  .language-label{
+  .language-label {
     width: 0em;
     height: 0em;
     overflow: hidden;
@@ -20,7 +20,7 @@ header nav {
       width: 12.5em; // 200px / 16px = 12.5em
       padding: 0.3125em; // 5px / 16px = 0.3125em
       @extend %flex;
-     
+
       img {
         width: 80%; // 80% remains unchanged
         height: 80%; // 80% remains unchanged
@@ -42,19 +42,54 @@ header nav {
         color: $color3;
       }
 
-      & > select {
-        width: 9.375em; // 150px / 16px = 9.375em
-        text-align: center;
-        padding: 0.625em; // 10px / 16px = 0.625em
-        // border-radius: 6.25em; // Example, you can convert this similarly
-        border: none;
-        font-size: 1em; // 16px / 16px = 1em
-
-        & > select option {
-          display: block;
-          padding: 0.3125em 0; // 5px / 16px = 0.3125em, 0 remains unchanged
+      & > .select-box {
+        width: 180px;
+        position: relative;
+        font-size: 14px;
+        div{
+          cursor: pointer;
+        }
+        input {
+          width: 100%;
+          border: none;
+          padding: 10px 0;
+          cursor: pointer;
           text-align: center;
-          font-size: 1.5em; // 24px / 16px = 1.5em
+          outline: none; 
+          user-select: none;
+          pointer-events: none;
+        }
+
+        ul {
+          width: 170px;
+          background-color: #fff;
+          padding: 0 5px;
+          position: absolute;
+          top: 35px;
+
+          li {
+            // border-bottom: 1px solid black;
+            padding: 10px 0;
+            padding-left: 40px;
+            cursor: pointer;
+            text-align: center;
+            // @extend %flex;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            .pic{
+              width: 30px;
+              height: 30px;
+            }
+
+            &:hover{
+              color: $color3;
+              // border-bottom: 1px solid $color3;
+            }
+            &:last-child{
+              border: none;
+            }
+          }
         }
       }
     }

@@ -1,0 +1,21 @@
+<form [formGroup]="mailForm">
+    <div>
+        <label for="">姓名 : </label>
+        <input type="text" formControlName="name">
+    </div>
+    <div>
+        <label for="">email : </label>
+        <input type="text" formControlName="email">
+    </div>
+    <div>
+        <label for="">LINE ID : </label>
+        <input type="text" formControlName="lineId">
+    </div>
+    <div>
+        <label for="">訊息 : </label>
+        <input type="text" formControlName="message">
+    </div>
+    <div>
+        <button type="button" (click)="sendEmail()">送出</button>
+    </div>
+</form>

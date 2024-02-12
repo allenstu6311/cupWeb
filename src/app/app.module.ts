@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule,ReactiveFormsModule } from '@angular/forms'; 
 
 //多國語系
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -17,6 +17,7 @@ import { AboutComponent } from './view/about/about.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SelectComponent } from './components/select/select.component';
+import { ConcatComponent } from './view/concat/concat.component';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -30,12 +31,14 @@ export function createTranslateLoader(http: HttpClient) {
     FooterComponent,
     HomeComponent,
     AboutComponent,
-    SelectComponent
+    SelectComponent,
+    ConcatComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule ,
+    ReactiveFormsModule,
     HttpClientModule,
     TranslateModule.forRoot({
       defaultLanguage:'zh-TW',

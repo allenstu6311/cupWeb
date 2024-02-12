@@ -1,26 +1,46 @@
 {
-    "header":{
-        "about":"About",
-        "portfolio":"Portfolio",
-        "course":"Course",
-        "contact":"Contact"
+    "header": {
+        "about": "About Me",
+        "portfolio": "Portfolio",
+        "course": "Course Introduction",
+        "contact": "Contact Me"
     },
-    "introduce":{
-        "title":{
-            "first":"We are Desert Turtles,",
-            "second":"and we love to perfect every little detail."
+    "introduce": {
+        "title": {
+            "first": "Hi, I'm Winnie, and I love painting",
+            "second": "We like to perfect every little detail."
         },
-        "subTitle":{
-            "first":"Join us in elevating the quality of life with you,",
-            "second":"and fill your life with practical and therapeutic items."
+        "subTitle": {
+            "first": "Designing the most special items for the most important you",
+            "second": "Making life filled with those practical and therapeutic items"
         },
-        "content":{
-            "first":"Desert Turtles is currently striving to improve step by step,",
-            "second":"hoping that every one of you who chooses us will genuinely like us from the bottom of your heart."
+        "content": {
+            "first": "Bringing more beauty to life with a bit of creativity and care.",
+            "second": ""
         }
     },
-    
     "author": {
-        "text": "Hello~ I'm Jayna, and I'm delighted to meet you here. Desert Turtle is my first brand, and I hope it's a brand that focuses on warmth, attention to detail, and emotions. Currently, we are working towards this direction with dedication. The philosophy behind Desert Turtle is simple: we want both you, the buyer of our products, and the person receiving your gift, to 'slowly feel the warmth in your heart' when you open the box."
+        "text": "Hello~ I'm glad to meet you here. I'm Jayna. Desert Turtle is the first brand I established. I hope it is a brand that focuses on warmth, details, and emotions. I'm currently working and moving forward in this direction. The philosophy of the Desert Turtle brand is simple. We hope that both the purchaser and the recipient of the gift can 'slowly feel the warmth in their heart' when unboxing."
+    },
+    "pet": {},
+    "service": {
+        "title": "Everything you can think of can be designed into reality...",
+        "article": {
+            "first": {
+                "title": "⚈ Illustration Design",
+                "content": "Often have some images in mind, but don't know how to start? Or want a unique work but have no clue? Welcome to Winnie's handmade, bring your ideas, let us 'draw' them into reality with creativity"
+            },
+            "second": {
+                "title": "⚈ Hand-painted Works",
+                "content": "Welcome to view my works, hope you like them. Friends who are interested are also welcome to contact me~ ★My IG: @yn.handpaint/Your ideas, let us 'draw' them into reality with creativity"
+            },
+            "third": {
+                "title": "⚈ Painting Courses",
+                "content": "I have been a children's art tutor, hoping to let every adult and child not only unleash their creativity through painting but also heal their soul. Friends who are interested, no matter your age or whether you have painting experience, are welcome to sign up for the course/Your ideas, let us 'draw' them into reality with creativity"
+            }
+        }
+    },
+    "ig":{
+        "button":"see more"
     }
 }
