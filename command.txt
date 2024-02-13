@@ -4,3 +4,7 @@ ng g c view/about
 
 
 ng g service service/language
+
+//上傳gitHubPage指令
+ng build --base-href /cupWeb/ 
+npx ngh --dir=dist/cupWeb

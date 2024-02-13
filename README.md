@@ -25,3 +25,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## 部屬問題
+這次被路徑問題雷得很慘，引入圖片不需要../等對路徑設定，baseHref即可，在angular.json以及index.html

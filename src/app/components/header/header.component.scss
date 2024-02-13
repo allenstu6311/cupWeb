@@ -39,7 +39,7 @@ header nav {
 
       & > a {
         font-size: 1em; // 16px / 16px = 1em
-        color: $color3;
+        color: $color2;
       }
 
       & > .select-box {
@@ -83,8 +83,8 @@ header nav {
             }
 
             &:hover{
-              color: $color3;
-              // border-bottom: 1px solid $color3;
+              color: $color2;
+              // border-bottom: 1px solid $color2;
             }
             &:last-child{
               border: none;

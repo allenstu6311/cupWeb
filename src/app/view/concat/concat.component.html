@@ -1,21 +1,79 @@
-<form [formGroup]="mailForm">
-    <div>
-        <label for="">姓名 : </label>
-        <input type="text" formControlName="name">
+<div id="concat">
+  <section>
+    <div class="title">
+      <h1>聯絡我</h1>
     </div>
-    <div>
-        <label for="">email : </label>
-        <input type="text" formControlName="email">
+    <div class="input-area">
+      <form [formGroup]="mailForm">
+        <div>
+          <label for="name">姓名</label>
+          <input type="text" formControlName="name" id="name"/>
+          <p class="has-error" *ngIf="mailForm.get('name').errors?.required">
+            必填欄位
+          </p>
+        </div>
+        <div>
+          <label for="email">EMAIL</label>
+          <input type="text" formControlName="email" id="email"/>
+          <p class="has-error" *ngIf="mailForm.get('email')?.errors?.required">
+            必填欄位
+          </p>
+          <p class="has-error" *ngIf="mailForm.get('email').errors?.email">
+            信箱格式錯誤
+          </p>
+        </div>
+        <div>
+          <label for="lineId">LINE ID</label>
+          <input type="text" formControlName="lineId" id="lineId"/>
+        </div>
+        <div>
+          <label for="message">訊息</label>
+          <textarea
+            name=""
+            id="message"
+            cols="20"
+            rows="5"
+            formControlName="message"
+          ></textarea>
+        </div>
+        <div>
+          <button type="button" (click)="sendEmail()">送出</button>
+        </div>
+      </form>
+      <div class="text-box">
+        <div class="text">
+          <p>
+            這是您文章開始的地方。您可以點選此處並開始輸入。 正策 術一 說為的地
+            北速立一 一好長是 學再母想們術 育中但部中 面林 停的地想經
+            故兩甚乎的文 使該保 白分可 員心 或風這 委東何 議走 部作及 器國
+            越立父 生東他 然往地 果賣一 大什觀就；收麼從 我應我時 寫子春
+            解行醫我 人子著多 受適 印在今 主覺族 出心三壓 要都情。
+          </p>
+        </div>
+        <div class="contat">
+          <ul>
+            <li>📞+886-44066-3000</li>
+            <li>✉️demo@webnode.com</li>
+            <li>👭facebook專頁</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div>
-        <label for="">LINE ID : </label>
-        <input type="text" formControlName="lineId">
+  </section>
+
+  <div class="light-box" #lightBox *ngIf="showBox"  role="dialog" aria-labelledby="lightboxTitle" aria-describedby="lightboxDesc" tabindex="-1" aria-modal="true">
+    <div class="content-box">
+      <div class="text-title">
+        <h4 id="lightboxTitle">提示</h4>
+        <div class="close" (click)="showBox=false">❌</div>
+      </div>
+      <div class="text">
+        <p *ngIf="sendStatus" id="lightboxDesc" #lightboxDesc>✅送出成功</p>
+        <p *ngIf="!sendStatus" id="lightboxDesc" #lightboxDesc>⛔送出失敗</p>
+      </div>
+      <div class="btn">
+        <button (click)="showBox=false">關閉</button>
+      </div>
     </div>
-    <div>
-        <label for="">訊息 : </label>
-        <input type="text" formControlName="message">
-    </div>
-    <div>
-        <button type="button" (click)="sendEmail()">送出</button>
-    </div>
-</form>
+  </div>
+</div>

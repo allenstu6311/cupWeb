@@ -133,7 +133,7 @@
 
       p {
         font-size: 1.125em; /* 18px */
-        color: $color4;
+        color: $color3;
         font-weight: bold;
         letter-spacing: 2px;
         line-height: 2;
@@ -152,7 +152,7 @@
 
         p {
           font-size: 1.125em; /* 18px */
-          color: $color4;
+          color: $color3;
           font-weight: bold;
           letter-spacing: 2px;
           line-height: 2;
@@ -178,7 +178,7 @@
       .content {
         padding: 10px;
         line-height: 2;
-        color: $color4;
+        color: $color3;
         font-size: 14px;
         font-weight: bold;
 
@@ -211,7 +211,7 @@
             }
             .name{
                 h4,p{
-                    color: $color4;
+                    color: $color3;
                 }
             }
         }
@@ -229,11 +229,7 @@
         text-align: center;
         margin: 20px 0;
         button{
-            background-color: $color1;
-            color: #fff;
-            border: none;
-            padding:5px 10px;
-            border-radius: 5px;
+          @extend %button;
         }
     }
   }
