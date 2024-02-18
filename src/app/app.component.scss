@@ -1,0 +1,13 @@
+// #tsparticles {
+//   width: 100vw;
+//   height: 100vh; /* 設定為視口高度，或根據需要調整 */
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: -1;
+// }
+
+#main{
+  position: relative;
+  z-index: 10;
+}

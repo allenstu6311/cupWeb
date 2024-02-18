@@ -1,1 +1,4 @@
-2.客製化select
+1.寄信debounce
+2.loading
+3.rxjs API
+4.輪播圖(swipper)

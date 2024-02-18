@@ -10,7 +10,7 @@ export class HeaderComponent {
   @ViewChild('select') select!: ElementRef;
   // language: string = 'zh-TW';
   showSelect: string = 'none';
-  optionValue: string = '中文';
+  optionValue: any = '中文';
   languageList: any[] = [
     {
       name: '中文',

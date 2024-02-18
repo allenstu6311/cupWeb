@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms'; 
+import { NgParticlesModule } from "ng-particles";
 
 //多國語系
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -47,7 +48,8 @@ export function createTranslateLoader(http: HttpClient) {
           useFactory: createTranslateLoader,
           deps: [HttpClient],
       },
-  })
+  }),
+  NgParticlesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

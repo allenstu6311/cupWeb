@@ -7,33 +7,62 @@
       <form [formGroup]="mailForm">
         <div>
           <label for="name">姓名</label>
-          <input type="text" formControlName="name" id="name"/>
-          <p class="has-error" *ngIf="mailForm.get('name').errors?.required">
+          <input
+            type="text"
+            formControlName="name"
+            id="name"
+            aria-required="true"
+            aria-label="姓名"
+          />
+          <p
+            class="has-error"
+            *ngIf="mailForm.get('name').errors?.required"
+            aria-live="polite"
+          >
             必填欄位
           </p>
         </div>
         <div>
           <label for="email">EMAIL</label>
-          <input type="text" formControlName="email" id="email"/>
-          <p class="has-error" *ngIf="mailForm.get('email')?.errors?.required">
+          <input
+            type="text"
+            formControlName="email"
+            id="email"
+            aria-required="true"
+            aria-label="EMAIL"
+          />
+          <p
+            class="has-error"
+            *ngIf="mailForm.get('email')?.errors?.required"
+            aria-live="polite"
+          >
             必填欄位
           </p>
-          <p class="has-error" *ngIf="mailForm.get('email').errors?.email">
+          <p
+            class="has-error"
+            *ngIf="mailForm.get('email').errors?.email"
+            aria-live="polite"
+          >
             信箱格式錯誤
           </p>
         </div>
         <div>
           <label for="lineId">LINE ID</label>
-          <input type="text" formControlName="lineId" id="lineId"/>
+          <input
+            type="text"
+            formControlName="lineId"
+            id="lineId"
+            aria-label="lineId"
+          />
         </div>
         <div>
           <label for="message">訊息</label>
           <textarea
-            name=""
             id="message"
             cols="20"
             rows="5"
             formControlName="message"
+            aria-label="訊息"
           ></textarea>
         </div>
         <div>
@@ -61,18 +90,33 @@
     </div>
   </section>
 
-  <div class="light-box" #lightBox *ngIf="showBox"  role="dialog" aria-labelledby="lightboxTitle" aria-describedby="lightboxDesc" tabindex="-1" aria-modal="true">
+  <div
+    class="light-box"
+    #lightBox
+    *ngIf="showBox"
+    role="dialog"
+    aria-labelledby="lightboxTitle"
+    aria-describedby="lightboxDesc"
+    tabindex="-1"
+    aria-modal="true"
+  >
     <div class="content-box">
       <div class="text-title">
         <h4 id="lightboxTitle">提示</h4>
-        <div class="close" (click)="showBox=false">❌</div>
+        <div class="close" (click)="showBox = false" aria-hidden="true">❌</div>
       </div>
       <div class="text">
-        <p *ngIf="sendStatus" id="lightboxDesc" #lightboxDesc>✅送出成功</p>
-        <p *ngIf="!sendStatus" id="lightboxDesc" #lightboxDesc>⛔送出失敗</p>
+        <p *ngIf="sendStatus" id="lightboxDesc" #lightboxDesc>
+          <span aria-hidden="true">✅</span>
+          送出成功
+        </p>
+        <p *ngIf="!sendStatus" id="lightboxDesc" #lightboxDesc>
+          <span aria-hidden="true">⛔</span>
+          送出失敗
+        </p>
       </div>
       <div class="btn">
-        <button (click)="showBox=false">關閉</button>
+        <button (click)="showBox = false">關閉</button>
       </div>
     </div>
   </div>

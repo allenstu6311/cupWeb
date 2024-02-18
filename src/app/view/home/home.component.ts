@@ -21,12 +21,12 @@ export class HomeComponent {
   ]
 
   constructor(){
-    timer(2500).subscribe(() => {
-      this.path.nativeElement.style.fill = '#fcd752';
-      timer(1000).subscribe(() => {
-        this.display = true;
-      });
-    });
+    // timer(2500).subscribe(() => {
+    //   this.path.nativeElement.style.fill = '#fcd752';
+    //   timer(1000).subscribe(() => {
+    //     this.display = true;
+    //   });
+    // });
   }
 
   ngOnInit() {}

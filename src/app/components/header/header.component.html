@@ -30,7 +30,7 @@
         </select> -->
         <div class="select-box" #select>
           <div class=""  (click)="handleSelect()">
-            <input type="text"  [(ngModel)]="optionValue" readonly/>
+            <input type="text"  [(ngModel)]="optionValue" readonly aria-label="語系選擇"/>
           </div>
           
           <ul [style.display]="showSelect">

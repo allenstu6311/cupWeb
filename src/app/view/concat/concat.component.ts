@@ -44,38 +44,37 @@ export class ConcatComponent {
         lineId: this.mailForm.value.lineId,
         message: this.mailForm.value.message,
       };
-      this.showBox = true;
-      setTimeout(() => {
-        console.log(this.lightBox);
-        this.lightBox.nativeElement.focus();
-      }, 1000);
+      // this.showBox = true;
+      // setTimeout(() => {
+      //   this.lightBox.nativeElement.focus();
+      // }, 1000);
    
 
-      // emailjs
-      //   .send('service_9y4pk49', 'template_rn4wtkf', templateParams , {
-      //     publicKey: 'c_mRBMNUzJXD7c1m4',
-      //   })
-      //   .then(
-      //     () => {
-      //       console.log('SUCCESS!');
-      //       this.sendStatus = true
-      //       this.showBox = true
-      //         setTimeout(() => {
-      //         // Wait for the next cycle so the DOM is updated
-      //         this.lightBox.nativeElement.focus();
-      //       }, 0);
-      //     },
-      //     (error) => {
-      //       this.sendStatus = false
-      //       this.showBox = true
-      //       // this.lightBox.nativeElement.focus()
-      //       setTimeout(() => {
-      //         // Wait for the next cycle so the DOM is updated
-      //         this.lightBox.nativeElement.focus();
-      //       }, 0);
-      //       console.log('FAILED...', (error as EmailJSResponseStatus).text);
-      //     }
-      //   );
+      emailjs
+        .send('service_9y4pk49', 'template_rn4wtkf', templateParams , {
+          publicKey: 'c_mRBMNUzJXD7c1m4',
+        })
+        .then(
+          () => {
+            console.log('SUCCESS!');
+            this.sendStatus = true
+            this.showBox = true
+              setTimeout(() => {
+              // Wait for the next cycle so the DOM is updated
+              this.lightBox.nativeElement.focus();
+            }, 1000);
+          },
+          (error) => {
+            this.sendStatus = false
+            this.showBox = true
+            // this.lightBox.nativeElement.focus()
+            setTimeout(() => {
+              // Wait for the next cycle so the DOM is updated
+              this.lightBox.nativeElement.focus();
+            }, 1000);
+            console.log('FAILED...', (error as EmailJSResponseStatus).text);
+          }
+        );
     }
   }
 }

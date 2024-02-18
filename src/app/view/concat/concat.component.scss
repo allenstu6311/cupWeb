@@ -1,12 +1,27 @@
 @import "../../../assets/scss/common.scss";
 #concat{
+    height: 80vh;
+    @extend %flex;
     .title{
-        margin-top: 50px;
-        margin-bottom: 30px;
+        // margin-top: 6.125em; // 50px
+        margin-bottom: 1.875em; 
+        position: relative;
         h1{
-            text-align: center;
-            font-size: 70px;
+            // font-size: 4.375em; // 70px
+            font-size: 2em;
             font-weight: 500;
+            color: $color3;
+            margin-left: 15px;
+
+            &::before{
+                content: "";
+                width: 0.3em;
+                height: 0.95em;
+                background-color: $color1;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
         }
     }
     .input-area{
@@ -16,24 +31,25 @@
         form{
             width: 45%;
             div{
-                margin-bottom: 10px;
+                margin-bottom: 0.625em; // 10px
 
                 label{
                     font-weight: bold;
                     color: $color3;
                     display: block;
-                    margin-bottom: 5px;
+                    margin-bottom: 0.3125em; // 5px
                 }
 
                 input{
                     width: 100%;
                     border: 1px solid $color3;
-                    border-radius: 5px;
-                    height: 40px;
+                    border-radius: 0.3125em; // 5px
+                    height: 2.5em; // 40px
                 }
 
                 textarea{
                     width: 100%;
+                    border-radius: 0.3125em; // 5px
                 }
 
                 button{
@@ -47,15 +63,18 @@
             color: $color3;
             .text{
                 line-height: 1.2;
-                letter-spacing: 1px;
-                font-size: 20px;
-                margin-bottom: 20px;
+                letter-spacing: 0.0625em; // 1px
+                font-size: 1.25em; // 20px
+                margin-bottom: 1.25em; // 20px
+                p{
+                    line-height: 150%;
+                }
             }
             .contat{
                 ul{
                     li{
-                        font-size: 24px;
-                        margin-bottom: 10px;
+                        font-size: 1.5em; // 24px
+                        margin-bottom: 0.625em; // 10px
                     }
                 }
             }
@@ -75,11 +94,11 @@
         @extend %flex;
 
         .content-box{
-            width: 300px;
+            width: 18.75em; // 300px
             background-color: #fff;
-            border-radius: 5px;
+            border-radius: 0.3125em; // 5px
             .text-title{
-                padding: 20px 15px;
+                padding: 1.25em 0.9375em; // 20px 15px
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -94,14 +113,14 @@
                 }
             }
             .text{
-                font-size: 18px;
+                font-size: 1.125em; // 18px
                 text-align: center;
-                line-height: 120px;
-                margin-bottom: 10px;
-                height: 100px;
+                line-height: 7.5em; // 120px
+                margin-bottom: 0.625em; // 10px
+                height: 6.25em; // 100px
             }
             .btn{
-                padding: 20px 10px;
+                padding: 1.25em 0.625em; // 20px 10px
                 text-align: center;
                 button{
                     @extend %button;
