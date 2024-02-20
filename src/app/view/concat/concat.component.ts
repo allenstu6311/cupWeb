@@ -27,12 +27,27 @@ export class ConcatComponent {
   constructor(private fb: FormBuilder, private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    this.mailForm = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      lineId: [''],
-      message: [''],
-    });
+    // this.mailForm = this.fb.group({
+    //   name: ['', Validators.required],
+    //   email: ['', [Validators.required, Validators.email]],
+    //   lineId: [''],
+    //   message: [''],
+    // });
+    this.mailForm = this.fb.group(
+      {
+        name: new FormControl('', {
+          validators: [Validators.required],
+        }),
+        email: new FormControl('', {
+          validators: [Validators.required],
+        }),
+        lineId: new FormControl(''),
+        message: new FormControl(''),
+      },
+      { updateOn: 'blur' }
+    );
+
+    console.log(this.mailForm)
   }
 
   sendEmail() {
@@ -48,25 +63,24 @@ export class ConcatComponent {
       // setTimeout(() => {
       //   this.lightBox.nativeElement.focus();
       // }, 1000);
-   
 
       emailjs
-        .send('service_9y4pk49', 'template_rn4wtkf', templateParams , {
+        .send('service_9y4pk49', 'template_rn4wtkf', templateParams, {
           publicKey: 'c_mRBMNUzJXD7c1m4',
         })
         .then(
           () => {
             console.log('SUCCESS!');
-            this.sendStatus = true
-            this.showBox = true
-              setTimeout(() => {
+            this.sendStatus = true;
+            this.showBox = true;
+            setTimeout(() => {
               // Wait for the next cycle so the DOM is updated
               this.lightBox.nativeElement.focus();
             }, 1000);
           },
           (error) => {
-            this.sendStatus = false
-            this.showBox = true
+            this.sendStatus = false;
+            this.showBox = true;
             // this.lightBox.nativeElement.focus()
             setTimeout(() => {
               // Wait for the next cycle so the DOM is updated
