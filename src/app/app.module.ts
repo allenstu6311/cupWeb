@@ -20,6 +20,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SelectComponent } from './components/select/select.component';
 import { ConcatComponent } from './view/concat/concat.component';
 
+//http
+import { Provider } from '@angular/core';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { NoopInterceptor } from './app.httpInterceptor';
+
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -51,7 +56,9 @@ export function createTranslateLoader(http: HttpClient) {
   }),
   NgParticlesModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: NoopInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

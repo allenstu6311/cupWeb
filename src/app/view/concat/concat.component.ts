@@ -11,6 +11,7 @@ import {
   Validators,
 } from '@angular/forms';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-concat',
@@ -24,7 +25,16 @@ export class ConcatComponent {
   sendStatus: boolean = false;
   showBox: boolean = false;
 
-  constructor(private fb: FormBuilder, private cdr: ChangeDetectorRef) {}
+  constructor(
+    private fb: FormBuilder,
+    private cdr: ChangeDetectorRef,
+    private http: HttpClient
+  ) {
+    this.http.get("https://fakestoreapi.com/products/1")
+    .subscribe((res:any)=>{
+      console.log(res)
+    })
+  }
 
   ngOnInit() {
     // this.mailForm = this.fb.group({
@@ -47,7 +57,7 @@ export class ConcatComponent {
       { updateOn: 'blur' }
     );
 
-    console.log(this.mailForm)
+    console.log(this.mailForm);
   }
 
   sendEmail() {
