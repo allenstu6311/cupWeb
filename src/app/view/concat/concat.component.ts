@@ -30,7 +30,7 @@ export class ConcatComponent {
     private cdr: ChangeDetectorRef,
     private http: HttpClient
   ) {
-    this.http.get("https://fakestoreapi.com/products/1")
+    this.http.get("/products/1")
     .subscribe((res:any)=>{
       console.log(res)
     })
@@ -47,6 +47,7 @@ export class ConcatComponent {
       {
         name: new FormControl('', {
           validators: [Validators.required],
+          updateOn:'blur'
         }),
         email: new FormControl('', {
           validators: [Validators.required],
@@ -54,10 +55,8 @@ export class ConcatComponent {
         lineId: new FormControl(''),
         message: new FormControl(''),
       },
-      { updateOn: 'blur' }
-    );
 
-    console.log(this.mailForm);
+    );
   }
 
   sendEmail() {
