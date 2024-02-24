@@ -16,6 +16,7 @@ export class HomeComponent {
 
   @ViewChild('swiper') swiper!: ElementRef<SwiperContainer>;
   @ViewChild('swiperThumbs') swiperThumbs!: ElementRef<SwiperContainer>;
+  
 
   index: number = 0;
   display: boolean = false;
@@ -43,7 +44,6 @@ export class HomeComponent {
 
   // Swiper
   swiperConfig: SwiperOptions = {
-    spaceBetween: 10,
     loop: true,
     navigation: {
       nextEl: '.next-btn',
@@ -53,19 +53,22 @@ export class HomeComponent {
       el: '.swiper-pagination',
       type: 'bullets',
     },
+    speed: 1000,
     // injectStylesUrls: ['assets/scss/color.scss'],
-    injectStyles: [
-      `
-      :host(.swiper) .swiper-wrapper {
-        background-color: red;
-      }
-      `, // 直接提供样式文本
-    ],
+    // injectStyles: [
+    //   `
+    //   :host(.swiper) .swiper-wrapper {
+    //     background-color: red;
+    //   }
+    //   `, // 直接提供样式文本
+    // ],
     // injectStylesUrls:['./home.component.scss']
   };
 
   ngAfterViewInit() {
     this.swiper.nativeElement.swiper.activeIndex = this.index;
+    //自動輪播
+    this.swiper.nativeElement.swiper.autoplay.start()
   }
 
   slideChange(swiper: any) {

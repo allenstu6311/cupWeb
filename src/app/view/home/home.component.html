@@ -78,19 +78,19 @@
             </p>
           </div>
           <swiper-container
-          class="swiper-container red"
+            class="swiper-container red"
             appSwiper
             #swiper
             [config]="swiperConfig"
             (slidechange)="slideChange($event)"
           >
-            <swiper-slide *ngFor="let item of carousel" style="height: 350px;">
+            <swiper-slide *ngFor="let item of carousel" style="height: 350px">
               <div
                 class="ratio ratio-4x3"
                 [ngStyle]="{
                   background: 'url(' + item + ') no-repeat top center / contain'
                 }"
-                style="height: 100%;width: 100%;"
+                style="height: 100%; width: 100%"
               ></div>
             </swiper-slide>
           </swiper-container>
