@@ -161,6 +161,22 @@
 
       .pic {
         width: 45%;
+        // swiper
+        .swiper-container::part(container) {
+          height: 370px;
+        }
+        // .swiper-container::part(button-next), .swiper-container::part(button-prev) {
+        //   color: red;
+       
+        // }
+        // .swiper-container::part(button-next){
+        //   display: none;
+        // }
+
+        .swiper-container::part(pagination) {
+          bottom: -1px;
+        }
+       
       }
     }
   }
@@ -195,42 +211,46 @@
     }
   }
 
-  .ig{
-    .user{
-        .user-info{
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-            
-            .pic{
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                overflow: hidden;
-            }
-            .name{
-                h4,p{
-                    color: $color3;
-                }
-            }
+  .ig {
+    .user {
+      .user-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+
+        .pic {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          overflow: hidden;
         }
+        .name {
+          h4,
+          p {
+            color: $color3;
+          }
+        }
+      }
     }
-    .photo{
-        ul{
-            display: flex;
-            li{
-                width: 20%;
-                height: 247px;
-            }
+    .photo {
+      ul {
+        display: flex;
+        li {
+          width: 20%;
+          height: 247px;
         }
+      }
     }
-    .btn{
-        text-align: center;
-        margin: 20px 0;
-        button{
-          @extend %button;
-        }
+    .btn {
+      text-align: center;
+      margin: 20px 0;
+      button {
+        @extend %button;
+      }
     }
   }
 }
+
+
+

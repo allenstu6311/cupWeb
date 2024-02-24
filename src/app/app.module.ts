@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms'; 
 import { NgParticlesModule } from "ng-particles";
@@ -21,10 +21,13 @@ import { SelectComponent } from './components/select/select.component';
 import { ConcatComponent } from './view/concat/concat.component';
 
 //http
-import { Provider } from '@angular/core';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NoopInterceptor } from './app.httpInterceptor';
 
+//swiper
+import { register } from 'swiper/element/bundle';
+import { SwiperDirective } from './swiper.directive';
+register();
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -38,7 +41,8 @@ export function createTranslateLoader(http: HttpClient) {
     HomeComponent,
     AboutComponent,
     SelectComponent,
-    ConcatComponent
+    ConcatComponent,
+    SwiperDirective
   ],
   imports: [
     BrowserModule,
@@ -59,6 +63,9 @@ export function createTranslateLoader(http: HttpClient) {
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: NoopInterceptor, multi: true }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ]
 })
 export class AppModule { }

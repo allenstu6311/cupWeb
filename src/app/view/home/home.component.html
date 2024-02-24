@@ -53,11 +53,7 @@
     <section class="author">
       <div class="author-pic">
         <div class="pic">
-          <img
-            src="assets/image/author.jpg"
-            alt="作者介紹"
-            loading="lazy"
-          />
+          <img src="assets/image/author.jpg" alt="作者介紹" loading="lazy" />
         </div>
       </div>
       <div class="author-text">
@@ -81,16 +77,26 @@
               一切的一切是那麼的療癒，今天又離理想生活更邁進了一步
             </p>
           </div>
-          <img
-            src="https://desertturtle.art/wp-content/uploads/2022/08/%E6%B2%99%E6%BC%A0%E9%BE%9C%E9%BE%9C12-1.jpg"
-            alt=""
-          />
+          <swiper-container
+          class="swiper-container red"
+            appSwiper
+            #swiper
+            [config]="swiperConfig"
+            (slidechange)="slideChange($event)"
+          >
+            <swiper-slide *ngFor="let item of carousel" style="height: 350px;">
+              <div
+                class="ratio ratio-4x3"
+                [ngStyle]="{
+                  background: 'url(' + item + ') no-repeat top center / contain'
+                }"
+                style="height: 100%;width: 100%;"
+              ></div>
+            </swiper-slide>
+          </swiper-container>
         </div>
         <div class="pic">
-          <img
-            src="assets/image/pet.jpg"
-            alt=""
-          />
+          <img src="assets/image/pet.jpg" alt="" />
         </div>
       </div>
     </section>
@@ -150,7 +156,6 @@
             <a href="https://www.instagram.com/turtle.draw_/" target="_blank">
               <img src="{{ pic }}" alt="ig相片" />
             </a>
-           
           </li>
         </ul>
       </div>

@@ -4,63 +4,64 @@
 @import "./assets/scss/color.scss";
 
 @font-face {
-    font-family: Noto Sans TC;
-    src: url("./assets/font/NotoSansTC-VariableFont_wght.ttf");
-  }
+  font-family: Noto Sans TC;
+  src: url("./assets/font/NotoSansTC-VariableFont_wght.ttf");
+}
 
 * {
-    text-decoration: none;
-    font-family: Noto Sans TC;
+  text-decoration: none;
+  font-family: Noto Sans TC;
 }
 
 body {
-    background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-h1 {}
+h1 {
+}
 
 h2 {
-    font-size: 2.375em; /* 38px */
-    font-weight: bold;
+  font-size: 2.375em; /* 38px */
+  font-weight: bold;
 }
 
 h3 {
-    font-size: 2.0625em; /* 33px */
-    font-weight: bold;
+  font-size: 2.0625em; /* 33px */
+  font-weight: bold;
 }
 
 h4 {
-    font-size: 1.125em; /* 18px */
-    font-weight: bold;
+  font-size: 1.125em; /* 18px */
+  font-weight: bold;
 }
 
 section {
-    width: 90%;
-    margin-bottom: 6.25em; /* 100px */
-    max-width: 70em; /* 1600px */
-    margin: auto;
+  width: 90%;
+  margin-bottom: 6.25em; /* 100px */
+  max-width: 70em; /* 1600px */
+  margin: auto;
 }
 
 section.banner {
-    width: 100%;
-    max-width: 200em;
-    border: none;
-    margin-bottom: 6.25em; /* 100px */
-    padding: 0;
+  width: 100%;
+  max-width: 200em;
+  border: none;
+  margin-bottom: 6.25em; /* 100px */
+  padding: 0;
 }
 
 .line {
-    border-bottom: 2px gray dashed;
-    margin: 4em auto; /* 80px */
-    width: 80%;
+  border-bottom: 2px gray dashed;
+  margin: 4em auto; /* 80px */
+  width: 80%;
 }
