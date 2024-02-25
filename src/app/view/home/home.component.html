@@ -77,23 +77,27 @@
               一切的一切是那麼的療癒，今天又離理想生活更邁進了一步
             </p>
           </div>
-          <swiper-container
-            class="swiper-container red"
-            appSwiper
-            #swiper
-            [config]="swiperConfig"
-            (slidechange)="slideChange($event)"
-          >
-            <swiper-slide *ngFor="let item of carousel" style="height: 350px">
-              <div
-                class="ratio ratio-4x3"
-                [ngStyle]="{
-                  background: 'url(' + item + ') no-repeat top center / contain'
-                }"
-                style="height: 100%; width: 100%"
-              ></div>
-            </swiper-slide>
-          </swiper-container>
+          <!-- Slider main container -->
+          <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide" *ngFor="let pic of carousel">
+                <img  class="swiper-slide"  src="{{pic}}" alt="">
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <!-- <div class="prev-btn"></div>
+            <div class="next-btn"></div> -->
+            <div class="swiper-button-prev control"></div>
+            <div class="swiper-button-next control"></div>
+
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+          </div>
         </div>
         <div class="pic">
           <img src="assets/image/pet.jpg" alt="" />

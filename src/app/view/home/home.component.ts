@@ -3,6 +3,7 @@ import { delay } from 'rxjs/operators';
 import { timer } from 'rxjs';
 import { SwiperContainer } from 'swiper/element';
 import { SwiperOptions } from 'swiper/types';
+import { Swiper } from 'swiper';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,8 @@ export class HomeComponent {
 
   @ViewChild('swiper') swiper!: ElementRef<SwiperContainer>;
   @ViewChild('swiperThumbs') swiperThumbs!: ElementRef<SwiperContainer>;
-  
+
+  swiperComponent: Swiper | any;
 
   index: number = 0;
   display: boolean = false;
@@ -42,36 +44,39 @@ export class HomeComponent {
     // });
   }
 
+  ngAfterViewInit() {
+    this.swiperComponent = new Swiper(
+      ".swiper-container",
+      this.swiperConfig
+    );
+    // this.swiperComponent.on('slideChange', (swiper: any) => {
+    //   console.log('swiper',swiper.activeIndex)
+    //   // this.index = swiper.detail[0].activeIndex;
+    // });
+  }
+
   // Swiper
   swiperConfig: SwiperOptions = {
+    spaceBetween:30,
+    scrollbar:false,
+    autoplay: {
+      // delay: 2500,
+      disableOnInteraction: false, // 點擊換頁也不會停止自動撥放
+    },
     loop: true,
+    // navigation: {
+    //   nextEl: '.next-btn',
+    //   prevEl: '.prev-btn',
+    // },
     navigation: {
-      nextEl: '.next-btn',
-      prevEl: '.prev-btn',
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
+      clickable: true,
     },
     speed: 1000,
-    // injectStylesUrls: ['assets/scss/color.scss'],
-    // injectStyles: [
-    //   `
-    //   :host(.swiper) .swiper-wrapper {
-    //     background-color: red;
-    //   }
-    //   `, // 直接提供样式文本
-    // ],
-    // injectStylesUrls:['./home.component.scss']
   };
-
-  ngAfterViewInit() {
-    this.swiper.nativeElement.swiper.activeIndex = this.index;
-    //自動輪播
-    this.swiper.nativeElement.swiper.autoplay.start()
-  }
-
-  slideChange(swiper: any) {
-    this.index = swiper.detail[0].activeIndex;
-  }
 }

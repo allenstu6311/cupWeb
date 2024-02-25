@@ -2,6 +2,7 @@
 @import "./assets/scss/reset.scss";
 @import "./assets/scss/common.scss";
 @import "./assets/scss/color.scss";
+@import "./assets/scss/swiper.scss";
 
 @font-face {
   font-family: Noto Sans TC;
@@ -65,3 +66,12 @@ section.banner {
   margin: 4em auto; /* 80px */
   width: 80%;
 }
+
+
+// .swiper-pagination-bullet{
+//   display: inline-block;
+//   width: 10px;
+//   height: 10px;
+//   background-color: red;
+//   margin: 0 10px;
+// }

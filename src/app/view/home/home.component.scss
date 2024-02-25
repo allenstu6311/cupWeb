@@ -161,22 +161,40 @@
 
       .pic {
         width: 45%;
-        // swiper
-        .swiper-container::part(container) {
-          height: 370px;
-        }
-        // .swiper-container::part(button-next), .swiper-container::part(button-prev) {
-        //   color: red;
-       
-        // }
-        // .swiper-container::part(button-next){
-        //   display: none;
-        // }
+        position: relative;
+        .swiper-container {
+          overflow: hidden;
 
-        .swiper-container::part(pagination) {
-          bottom: -1px;
+          .swiper-slide {
+            width: 400px;
+            height: 350px;
+            margin: auto;
+          }
+
+          .control {
+            top: 65%;
+          }
+
+          .swiper-pagination {
+            bottom: -12px;
+          }
         }
-       
+        // %control-btn {
+        //   position: absolute;
+        //   top: 65%;
+        //   width: 20px;
+        //   height: 20px;
+        //   background-color: red;
+        //   z-index: 100;
+        // }
+        // .prev-btn {
+        //   @extend %control-btn;
+        //   left: 0;
+        // }
+        // .next-btn {
+        //   @extend %control-btn;
+        //   right: 0;
+        // }
       }
     }
   }
@@ -251,6 +269,3 @@
     }
   }
 }
-
-
-
