@@ -11,7 +11,7 @@
       <div class="control-line"></div>
       <div class="control-line"></div>
     </div>
-
+    <li>{{openSiderBar}} : {{openSiderBar?'0':'-1'}}</li>
     <!-- 選單內容(電腦版) -->
     <ul class="lg">
       <li>
@@ -56,7 +56,7 @@
 
     <!-- 選單內容(手機版) -->
     <!-- :tabindex="openSiderBar?'0':'-1'" -->
-    <ul class="md"  :tabindex="openSiderBar?'0':'-1'" [style.width]="openSiderBar ? 200 + 'px' : 0 + 'px'" id="mainmenu">
+    <ul class="md" [style.width]="openSiderBar ? 200 + 'px' : 0 + 'px'" id="mainmenu">
       <li>
         <li>
           <div class="logo">
@@ -65,7 +65,7 @@
             </div>
           </div>
         </li>
-      <li>
+      <li *ngIf="openSiderBar">
         <div class="select-box" #mobileSelect>
           <div class="" (click)="handleSelect('mobile')">
             <input
@@ -91,19 +91,21 @@
           </ul>
         </div>
       </li>
-      <li>
+      <li  *ngIf="openSiderBar">
         <a routerLink="about">{{ "header.about" | translate }}</a>
       </li>
-      <li>
+      <li *ngIf="openSiderBar">
         <a href="">{{ "header.portfolio" | translate }}</a>
       </li>
-      <li>
+      <li *ngIf="openSiderBar">
         <a href="">{{ "header.course" | translate }}</a>
       </li>
-      <li>
+      <li *ngIf="openSiderBar">
         <a routerLink="concat">{{ "header.contact" | translate }}</a>
       </li>
-      <div class="close" (click)="openSiderBar = false" tabindex="0"  (keydown)="openSiderBar = false"  aria-label="關閉選單">
+ 
+      <div class="close" (click)="openSiderBar = false"  *ngIf="openSiderBar" tabindex="0" 
+      (keydown)="handleKeydown($event)"  aria-label="關閉選單">
         <div class="close-line"></div>
         <div class="close-line"></div>
       </div>

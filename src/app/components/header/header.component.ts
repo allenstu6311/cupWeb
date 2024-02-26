@@ -85,4 +85,13 @@ export class HeaderComponent {
     this.optionValue = lang;
     this.translateService.use(language);
   }
+
+  handleKeydown(event:any) {
+    console.log(event)
+    // 检查是否按下了Enter或Space键
+    if (event.key === 'Enter' || event.key === ' ') {
+      this.openSiderBar = false;
+      event.preventDefault(); // 防止默认行为，如页面滚动
+    }
+  }
 }

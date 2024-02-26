@@ -79,4 +79,6 @@ export class HomeComponent {
     },
     speed: 1000,
   };
+
+
 }
