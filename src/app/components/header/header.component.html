@@ -6,7 +6,7 @@
       </div>
     </div>
     <!-- 控制手機板選單 -->
-    <div class="control" (click)="openSiderBar = true">
+    <div class="control" (click)="openSiderBar = true"   tabindex="0" (keydown)="openSiderBar = true" aria-label="選單呼叫"    >
       <div class="control-line"></div>
       <div class="control-line"></div>
       <div class="control-line"></div>
@@ -55,7 +55,8 @@
     </ul>
 
     <!-- 選單內容(手機版) -->
-    <ul class="md" [style.width]="openSiderBar ? 200 + 'px' : 0 + 'px'">
+    <!-- :tabindex="openSiderBar?'0':'-1'" -->
+    <ul class="md"  :tabindex="openSiderBar?'0':'-1'" [style.width]="openSiderBar ? 200 + 'px' : 0 + 'px'" id="mainmenu">
       <li>
         <li>
           <div class="logo">
@@ -102,7 +103,7 @@
       <li>
         <a routerLink="concat">{{ "header.contact" | translate }}</a>
       </li>
-      <div class="close" (click)="openSiderBar = false">
+      <div class="close" (click)="openSiderBar = false" tabindex="0"  (keydown)="openSiderBar = false"  aria-label="關閉選單">
         <div class="close-line"></div>
         <div class="close-line"></div>
       </div>
