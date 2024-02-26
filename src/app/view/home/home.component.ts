@@ -57,7 +57,7 @@ export class HomeComponent {
 
   // Swiper
   swiperConfig: SwiperOptions = {
-    spaceBetween:30,
+    // spaceBetween:30,
     scrollbar:false,
     autoplay: {
       // delay: 2500,
