@@ -1,5 +1,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { languageList } from 'src/assets/model/model';
+import { ActivatedRoute, Router,NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +10,12 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent {
   @ViewChild('select') select!: ElementRef;
+  @ViewChild('mobileSelect') mobileSelect!: ElementRef;
   // language: string = 'zh-TW';
   showSelect: string = 'none';
-  optionValue: any = '中文';
-  languageList: any[] = [
+  optionValue: string = '中文';
+  openSiderBar: boolean = false;
+  languageList: languageList[] = [
     {
       name: '中文',
       pic: 'assets/image/language/chinese.jpeg',
@@ -21,12 +25,28 @@ export class HeaderComponent {
       pic: 'assets/image/language/america.jpg',
     },
   ];
+  optionsType: string = '';
 
-  constructor(private translateService: TranslateService) {
+  constructor(
+    private translateService: TranslateService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {
     this.hideSelect = this.hideSelect.bind(this);
   }
 
-  handleSelect() {
+
+  ngOnInit(){
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        // 在這裡你可以更新你的頁面變數
+        this.openSiderBar = false
+      }
+    });
+  }
+
+  handleSelect(type: string) {
+    this.optionsType = type;
     if (this.showSelect == 'none') {
       this.showSelect = 'block';
       document.addEventListener('click', this.hideSelect);
@@ -37,13 +57,21 @@ export class HeaderComponent {
   }
 
   hideSelect(e: any) {
-    if (!this.select.nativeElement.contains(e.target)) {
-      this.showSelect = 'none';
-      document.removeEventListener('click', this.hideSelect);
+    if (this.optionsType == 'mobile') {
+      if (!this.mobileSelect.nativeElement.contains(e.target)) {
+        this.showSelect = 'none';
+        document.removeEventListener('click', this.hideSelect);
+      }
+    } else {
+      if (!this.select.nativeElement.contains(e.target)) {
+        this.showSelect = 'none';
+        document.removeEventListener('click', this.hideSelect);
+      }
     }
   }
 
   changeLanguage(lang: string) {
+    console.log(lang);
     this.showSelect = 'none';
     let language = '';
     switch (lang) {

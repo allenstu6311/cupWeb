@@ -18,7 +18,7 @@ export class HomeComponent {
   @ViewChild('swiper') swiper!: ElementRef<SwiperContainer>;
   @ViewChild('swiperThumbs') swiperThumbs!: ElementRef<SwiperContainer>;
 
-  swiperComponent: Swiper | any;
+  swiperComponent!: Swiper;
 
   index: number = 0;
   display: boolean = false;

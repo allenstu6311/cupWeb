@@ -2,14 +2,18 @@
   <nav class="main-color">
     <div class="logo">
       <div class="logo-pic">
-        <img
-          routerLink="home"
-          src="assets/image/winnie.png"
-          alt="商標"
-        />
+        <img routerLink="home" src="assets/image/winnie.png" alt="商標" />
       </div>
     </div>
-    <ul>
+    <!-- 控制手機板選單 -->
+    <div class="control" (click)="openSiderBar = true">
+      <div class="control-line"></div>
+      <div class="control-line"></div>
+      <div class="control-line"></div>
+    </div>
+
+    <!-- 選單內容(電腦版) -->
+    <ul class="lg">
       <li>
         <a routerLink="about">{{ "header.about" | translate }}</a>
       </li>
@@ -23,29 +27,87 @@
         <a routerLink="concat">{{ "header.contact" | translate }}</a>
       </li>
       <li>
-        <!-- <label for="language" class="language-label">語系:</label>
-        <select name="language" id="language" >
-          <option value="zh-TW">中文</option>
-          <option value="en-US">English</option>
-        </select> -->
         <div class="select-box" #select>
-          <div class=""  (click)="handleSelect()">
-            <input type="text"  [(ngModel)]="optionValue" readonly aria-label="語系選擇"/>
+          <div class="" (click)="handleSelect('computer')">
+            <input
+              type="text"
+              [(ngModel)]="optionValue"
+              readonly
+              aria-label="語系選擇"
+            />
           </div>
-          
-          <ul [style.display]="showSelect">
-            <li *ngFor="let item of languageList" (click)="changeLanguage(item.name)">
+          <!-- 語系下拉選單 -->
+          <ul [style.display]="showSelect" class="language-list">
+            <li
+              *ngFor="let item of languageList"
+              (click)="changeLanguage(item.name)"
+            >
               <div class="pic">
-                <img src="{{item.pic}}" alt="語系圖片">
+                <img src="{{ item.pic }}" alt="語系圖片" />
               </div>
               <p>
-                {{item.name}}
+                {{ item.name }}
               </p>
-        
             </li>
           </ul>
         </div>
       </li>
     </ul>
+
+    <!-- 選單內容(手機版) -->
+    <ul class="md" [style.width]="openSiderBar ? 200 + 'px' : 0 + 'px'">
+      <li>
+        <li>
+          <div class="logo">
+            <div class="logo-pic">
+              <img routerLink="home" src="assets/image/winnie.png" alt="商標" />
+            </div>
+          </div>
+        </li>
+      <li>
+        <div class="select-box" #mobileSelect>
+          <div class="" (click)="handleSelect('mobile')">
+            <input
+              type="text"
+              [(ngModel)]="optionValue"
+              readonly
+              aria-label="語系選擇"
+            />
+          </div>
+          <!-- 語系下拉選單 -->
+          <ul [style.display]="showSelect" class="language-list">
+            <li
+              *ngFor="let item of languageList"
+              (click)="changeLanguage(item.name)"
+            >
+              <div class="pic">
+                <img src="{{ item.pic }}" alt="語系圖片" />
+              </div>
+              <p>
+                {{ item.name }}
+              </p>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a routerLink="about">{{ "header.about" | translate }}</a>
+      </li>
+      <li>
+        <a href="">{{ "header.portfolio" | translate }}</a>
+      </li>
+      <li>
+        <a href="">{{ "header.course" | translate }}</a>
+      </li>
+      <li>
+        <a routerLink="concat">{{ "header.contact" | translate }}</a>
+      </li>
+      <div class="close" (click)="openSiderBar = false">
+        <div class="close-line"></div>
+        <div class="close-line"></div>
+      </div>
+    </ul>
   </nav>
 </header>
+
+<div class="shadow" [hidden]="!openSiderBar"></div>

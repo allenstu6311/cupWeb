@@ -144,11 +144,11 @@
   .pet {
     .pet-pic {
       display: flex;
-      align-items: flex-end;
+      // align-items: flex-end;
       justify-content: space-evenly;
 
       .pet-text {
-        margin-bottom: 0.625em; /* 10px */
+        margin-bottom: 1em; /* 10px */
 
         p {
           font-size: 1.125em; /* 18px */
@@ -166,9 +166,12 @@
           overflow: hidden;
 
           .swiper-slide {
-            width: 400px;
-            height: 350px;
-            margin: auto;
+            display: flex;
+            justify-content: center;
+
+            img{
+              width: 70%;
+            }
           }
 
           .control {
@@ -176,7 +179,7 @@
           }
 
           .swiper-pagination {
-            bottom: -12px;
+            bottom: -14px;
           }
         }
         // %control-btn {
