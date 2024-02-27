@@ -34,16 +34,28 @@ h1 {
 h2 {
   font-size: 2.1em; /* 38px */
   font-weight: bold;
+
+  @include mobile{
+    font-size: 1.5em;
+  }
 }
 
 h3 {
   font-size: 2.0625em; /* 33px */
   font-weight: bold;
+
+  
+  @include mobile{
+    font-size: 1.3em;
+  }
 }
 
 h4 {
   font-size: 1.125em; /* 18px */
   font-weight: bold;
+  @include mobile{
+    font-size: 1em;
+  }
 }
 
 section {
