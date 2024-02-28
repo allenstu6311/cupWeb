@@ -39,7 +39,7 @@ export class HeaderComponent {
   ngOnInit(){
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        // 在這裡你可以更新你的頁面變數
+        // 在這裡更新頁面變數
         this.openSiderBar = false
       }
     });
@@ -86,12 +86,17 @@ export class HeaderComponent {
     this.translateService.use(language);
   }
 
+
   handleKeydown(event:any) {
-    console.log(event)
+    // event.preventDefault(); // 防止默认行为，如页面滚动
+
     // 检查是否按下了Enter或Space键
-    if (event.key === 'Enter' || event.key === ' ') {
-      this.openSiderBar = false;
-      event.preventDefault(); // 防止默认行为，如页面滚动
+    if (event.key === 'Enter') {
+      if(this.openSiderBar){
+        this.openSiderBar = false;
+      }else{
+        this.openSiderBar = true;
+      }
     }
   }
 }

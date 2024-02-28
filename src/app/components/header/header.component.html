@@ -1,6 +1,6 @@
 <header>
   <nav class="main-color">
-    <div class="logo">
+    <div class="logo" tabindex="0">
       <div class="logo-pic">
         <img routerLink="home" src="assets/image/winnie.png" alt="商標" />
       </div>
@@ -10,13 +10,14 @@
       class="control"
       (click)="openSiderBar = true"
       tabindex="0"
-      (keydown)="openSiderBar = true"
+      (keydown)="handleKeydown($event)"
       aria-label="選單呼叫"
     >
       <div class="control-line"></div>
       <div class="control-line"></div>
       <div class="control-line"></div>
     </div>
+
     <!-- 選單內容(電腦版) -->
     <ul class="lg">
       <li>
@@ -60,7 +61,6 @@
     </ul>
 
     <!-- 選單內容(手機版) -->
-    <!-- :tabindex="openSiderBar?'0':'-1'" -->
     <ul
       class="md"
       [style.width]="openSiderBar ? 200 + 'px' : 0 + 'px'"
@@ -127,5 +127,5 @@
     </ul>
   </nav>
 </header>
-
-<div class="shadow" [hidden]="!openSiderBar"></div>
+<!-- 背景陰影 -->
+<div class="shadow" [hidden]="!openSiderBar" (click)="openSiderBar = false"></div>

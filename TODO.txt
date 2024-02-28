@@ -1,4 +1,3 @@
 1.寄信debounce
 2.loading
-3.選單點旁邊要關掉
-4.作者介紹改成4個P標籤
+3.keyframes
