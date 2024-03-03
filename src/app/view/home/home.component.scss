@@ -57,14 +57,14 @@
   .introduce {
     @extend %flex;
 
-    @include mobile {
+    @include tablet {
       flex-wrap: wrap;
     }
 
     & > .introduce-pic {
       width: 40%;
 
-      @include mobile {
+      @include tablet {
         width: 100%;
       }
     }
@@ -76,7 +76,7 @@
       flex-direction: column;
       gap: 9.375em 6.25em; /* 150px 100px */
 
-      @include mobile {
+      @include tablet {
         width: 100%;
       }
 
@@ -126,7 +126,7 @@
   .author {
     display: flex;
 
-    @include mobile {
+    @include tablet {
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -134,13 +134,13 @@
     .author-pic {
       width: 50%;
 
-      @include mobile {
+      @include tablet {
         width: 100%;
       }
 
       .pic {
         padding: 2.5em; /* 40px */
-        @include mobile {
+        @include tablet {
           padding: 1em;
         }
 
@@ -154,7 +154,7 @@
       width: 50%;
       @extend %flex;
 
-      @include mobile {
+      @include tablet {
         margin: auto;
       }
 
@@ -168,16 +168,16 @@
     }
   }
 
-  .pet {
-    .pet-pic {
+  .post {
+    .post-pic {
       display: flex;
       justify-content: space-evenly;
 
-      @include mobile{
+      @include tablet{
         flex-wrap: wrap;
       }
 
-      .pet-text {
+      .post-text {
         margin-bottom: 1em; /* 10px */
 
         p {
@@ -191,29 +191,34 @@
       .pic {
         width: 45%;
 
-        @include mobile{
+        @include tablet{
           width: 100%;
           margin-bottom: 30px;
         }
         position: relative;
         .swiper-container {
           overflow: hidden;
+          // overflow-x: hidden;
+          // overflow-y: unset;
+          position: relative;
 
           .swiper-slide {
             display: flex;
             justify-content: center;
 
             img {
-              width: 70%;
+              width: 75%;
             }
           }
 
           .control {
-            top: 70%;
+            top: 50%;
           }
 
           .swiper-pagination {
-            bottom: -14px;
+            position: absolute;
+            bottom: -1px;
+            background-color: #fff;
           }
         }
         // %control-btn {
@@ -226,11 +231,11 @@
         // }
         // .prev-btn {
         //   @extend %control-btn;
-        //   left: 0;
+        //   left: 20px;
         // }
         // .next-btn {
         //   @extend %control-btn;
-        //   right: 0;
+        //   right: 20px;
         // }
       }
     }
@@ -239,14 +244,14 @@
   .service {
     display: flex;
 
-    @include mobile{
+    @include tablet{
       flex-wrap: wrap;
     }
 
     & > .service-text {
       width: 50%;
 
-      @include mobile{
+      @include tablet{
         width: 100%;
       }
 
@@ -273,7 +278,7 @@
     }
     & > .service-pic {
       width: 50%;
-      @include mobile{
+      @include tablet{
         width: 100%;
       }
     }
@@ -305,7 +310,7 @@
       ul {
         display: flex;
 
-        @include mobile{
+        @include tablet{
           flex-wrap: wrap;
         }
 
@@ -313,7 +318,7 @@
           width: 20%;
           height: 20%;
 
-          @include mobile{
+          @include tablet{
             width: 33%;
             height: 33%;
           }

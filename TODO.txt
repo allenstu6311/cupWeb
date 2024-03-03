@@ -1,3 +1,5 @@
 1.寄信debounce
 2.loading
 3.keyframes
+4.圖片優化
+5.點擊圖片遍全螢幕
