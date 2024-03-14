@@ -1,4 +1,4 @@
-import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms'; 
 import { NgParticlesModule } from "ng-particles";
@@ -24,9 +24,14 @@ import { ConcatComponent } from './view/concat/concat.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NoopInterceptor } from './app.httpInterceptor';
 
+//ssr
+import { provideClientHydration } from '@angular/platform-browser';
+
+
 //swiper
 import { register } from 'swiper/element/bundle';
 import { SwiperDirective } from './swiper.directive';
+import { ServiceWorkerModule } from '@angular/service-worker';
 register();
 
 export function createTranslateLoader(http: HttpClient) {
@@ -58,10 +63,17 @@ export function createTranslateLoader(http: HttpClient) {
           deps: [HttpClient],
       },
   }),
-  NgParticlesModule
+  NgParticlesModule,
+  ServiceWorkerModule.register('ngsw-worker.js', {
+    enabled: !isDevMode(),
+    // Register the ServiceWorker as soon as the application is stable
+    // or after 30 seconds (whichever comes first).
+    registrationStrategy: 'registerWhenStable:30000'
+  })
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: NoopInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: NoopInterceptor, multi: true },
+    provideClientHydration () 
   ],
   bootstrap: [AppComponent],
   schemas: [

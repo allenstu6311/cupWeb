@@ -8,7 +8,7 @@ ng g service service/language
 ng g insterceptor http-study/interceptors/hero
 
 //上傳gitHubPage指令
-ng build --base-href /cupWeb/ 
+ng build --base-href /cupWeb/
 npx ngh --dir=dist/cupWeb
 
 

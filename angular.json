@@ -17,8 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "baseHref": "/cupWeb/",
-            "outputPath": "dist/cupWeb",
+            "outputPath": "dist/cupweb/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -31,12 +30,15 @@
               "src/assets",
               "src/assets/i18n",
               "src/assets/image",
-              "src/assets/scss"
+              "src/assets/scss",
+              "src/manifest.webmanifest"
             ],
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "serviceWorker": true,
+            "ngswConfigPath": "ngsw-config.json"
           },
           "configurations": {
             "production": {
@@ -94,13 +96,69 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
               "src/styles.scss"
             ],
             "scripts": []
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/cupweb/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json",
+            "inlineStyleLanguage": "scss"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "cupweb:build:development",
+              "serverTarget": "cupweb:server:development"
+            },
+            "production": {
+              "browserTarget": "cupweb:build:production",
+              "serverTarget": "cupweb:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "cupweb:build:production",
+              "serverTarget": "cupweb:server:production"
+            },
+            "development": {
+              "browserTarget": "cupweb:build:development",
+              "serverTarget": "cupweb:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
