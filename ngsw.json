@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1710431205487,
+  "timestamp": 1710435690181,
   "index": "/cupWeb/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/cupWeb/favicon.ico",
         "/cupWeb/index.html",
-        "/cupWeb/main.e71dd1bcebd6b03b.js",
+        "/cupWeb/main.781e216c72b14924.js",
         "/cupWeb/manifest.webmanifest",
         "/cupWeb/polyfills.5eeab2c8456a94de.js",
         "/cupWeb/runtime.424d886d0cfc50c1.js",
@@ -100,8 +100,8 @@
     "/cupWeb/assets/scss/reset.scss": "0ab599e9109701dfeafdefd489396ed554dff3f3",
     "/cupWeb/assets/scss/swiper.scss": "6bb0edb71a8dccebb3c0a765ceb5bf6e4be7fb57",
     "/cupWeb/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/cupWeb/index.html": "6944ceffaf8c86a0d4ddddb45fe4b044d190f3b5",
-    "/cupWeb/main.e71dd1bcebd6b03b.js": "850fefe6a8a45848e30ea737cc1ad4d94f68a0ce",
+    "/cupWeb/index.html": "7c37aad2fce03a86e193ef0fd1d80e5cd821d827",
+    "/cupWeb/main.781e216c72b14924.js": "d9825c48fd2490873d00d451616fa0ec2dcc59c2",
     "/cupWeb/manifest.webmanifest": "2f67a061f757633af531f8f2ca1f4a94bb99b025",
     "/cupWeb/polyfills.5eeab2c8456a94de.js": "208ceceb9d3afb91465ab27cdbad894905b3e01d",
     "/cupWeb/runtime.424d886d0cfc50c1.js": "3518251161430816d24465028d0fad22d435e659",
