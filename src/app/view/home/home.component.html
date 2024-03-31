@@ -18,154 +18,172 @@
     </div>
 </div> -->
 <div id="home">
-  <main>
-    <section class="banner">
-      <div class="banner-pic">
-        <!-- <img src="assets/image/banner.png" alt="封面圖片" /> -->
-        <img src="//wsrv.nl/?url=https://allenstu6311.github.io/cupWeb/assets/image/banner.png" alt="">
-      </div>
-    </section>
+  <section class="banner">
+    <div class="banner-pic">
+      <!-- <img src="assets/image/banner.png" alt="封面圖片" /> -->
+      <img
+        src="//wsrv.nl/?url=https://allenstu6311.github.io/cupWeb/assets/image/banner.png"
+        alt=""
+      />
+    </div>
+  </section>
 
-    <section class="introduce">
-      <div class="introduce-pic">
-        <!-- <img src="assets/image/introduce.png" alt="介紹區圖片" /> -->
-        <img src="//wsrv.nl/?url=https://allenstu6311.github.io/cupWeb/assets/image/introduce.png" alt="">
-      </div>
-      <div class="introduce-text">
-        <div class="title">
-          <div class="">
-            <h2>{{ "introduce.title.first" | translate }}</h2>
-          </div>
-        </div>
-        <div class="sub-title">
-          <div class="">
-            <h3>{{ "introduce.subTitle.first" | translate }}</h3>
-          </div>
-        </div>
-        <div class="content">
-          <div class="">
-            <p>{{ "introduce.content.first" | translate }}</p>
-          </div>
+  <section class="introduce">
+    <div class="introduce-pic">
+      <!-- <img src="assets/image/introduce.png" alt="介紹區圖片" /> -->
+      <img
+        src="//wsrv.nl/?url=https://allenstu6311.github.io/cupWeb/assets/image/introduce.png"
+        alt=""
+      />
+    </div>
+    <div class="introduce-text">
+      <div class="title">
+        <div class="">
+          <h2>{{ "introduce.title.first" | translate }}</h2>
         </div>
       </div>
-    </section>
-
-    <div class="line"></div>
-
-    <section class="author">
-      <div class="author-pic">
-        <div class="pic">
-          <!-- <img loading="lazy" src="assets/image/author.jpg" alt="作者介紹" loading="lazy" /> -->
-          <img loading="lazy" src="//wsrv.nl/?url=https://allenstu6311.github.io/cupWeb/assets/image/author.jpg" alt="作者介紹" loading="lazy" />
+      <div class="sub-title">
+        <div class="">
+          <h3>{{ "introduce.subTitle.first" | translate }}</h3>
         </div>
       </div>
-      <div class="author-text">
-        <div class="text content-text">
-          <p> ⚈{{ "author.first" | translate }}</p>
-          <p> ⚈{{ "author.second" | translate }}</p>
-          <p> ⚈{{ "author.third" | translate }}</p>
-          <p> ⚈{{ "author.fourth" | translate }}</p>
+      <div class="content">
+        <div class="">
+          <p>{{ "introduce.content.first" | translate }}</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <div class="line"></div>
+  <div class="line"></div>
 
-    <section class="post">
-      <div class="post-pic">
-        <div class="pic">
-          <div class="post-text">
-            <p>
-              喜愛畫畫的我最喜歡將創意融入生活，讓每幅畫獨一無二，就像我們每個人都是如此特別，充滿生命力及自己的故事。希望能透過更多的作品，為我們的周圍增添更美好的色彩。
-            </p>
-          </div>
-          <!-- Slider main container -->
-          <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide" *ngFor="let pic of carousel">
-                <img loading="lazy"  src="{{pic}}" alt="">
-              </div>
+  <section class="author">
+    <div class="author-pic">
+      <div class="pic">
+        <!-- <img loading="lazy" src="assets/image/author.jpg" alt="作者介紹" loading="lazy" /> -->
+        <img
+          loading="lazy"
+          src="//wsrv.nl/?url=https://allenstu6311.github.io/cupWeb/assets/image/author.jpg"
+          alt="作者介紹"
+          loading="lazy"
+        />
+      </div>
+    </div>
+    <div class="author-text">
+      <div class="text content-text">
+        <p>⚈{{ "author.first" | translate }}</p>
+        <p>⚈{{ "author.second" | translate }}</p>
+        <p>⚈{{ "author.third" | translate }}</p>
+        <p>⚈{{ "author.fourth" | translate }}</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="line"></div>
+
+  <section class="post">
+    <div class="post-pic">
+      <div class="pic">
+        <div class="post-text">
+          <p>
+            {{ "post.content" | translate }}
+          </p>
+        </div>
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide" *ngFor="let pic of carousel">
+              <img loading="lazy" src="{{ pic }}" alt="" />
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
 
-            <!-- If we need navigation buttons -->
-            <!-- <div class="prev-btn"></div>
+          <!-- If we need navigation buttons -->
+          <!-- <div class="prev-btn"></div>
             <div class="next-btn"></div> -->
-            <div class="swiper-button-prev control"></div>
-            <div class="swiper-button-next control"></div>
-          </div>
+          <div class="swiper-button-prev control"></div>
+          <div class="swiper-button-next control"></div>
         </div>
+      </div>
+      <div class="pic">
+        <img loading="lazy" src="assets/image/post.jpg" alt="貼文相片" />
+      </div>
+    </div>
+  </section>
+
+  <div class="line"></div>
+
+  <section class="service">
+    <div class="service-text">
+      <div class="title">
+        <h2>{{ "service.title" | translate }}</h2>
+      </div>
+      <ul class="content">
+        <li>
+          <strong>{{ "service.article.first.title" | translate }}</strong>
+          <p>
+            {{ "service.article.first.content" | translate }}
+          </p>
+        </li>
+        <li>
+          <strong>{{ "service.article.second.title" | translate }}</strong>
+          <p>
+            {{ "service.article.second.content" | translate }}
+          </p>
+        </li>
+        <li>
+          <strong>{{ "service.article.third.title" | translate }}</strong>
+          <p>
+            {{ "service.article.third.content" | translate }}
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div class="service-pic">
+      <!-- <img loading="lazy" src="assets/image/service.jpg" alt="服務區照片" /> -->
+      <img
+        loading="lazy"
+        src="//wsrv.nl/?url=https://allenstu6311.github.io/cupWeb/assets/image/service.jpg"
+        alt="服務區照片"
+        loading="lazy"
+      />
+    </div>
+  </section>
+
+  <div class="line"></div>
+
+  <section class="ig">
+    <div class="user">
+      <div class="user-info">
         <div class="pic">
-          <img loading="lazy" src="assets/image/post.jpg" alt="貼文相片" />
+          <a href="https://www.instagram.com/turtle.draw_/" target="_blank">
+            <img
+              loading="lazy"
+              src="assets/image/ig/mugshot.jpg"
+              alt="ig大頭貼"
+            />
+          </a>
+        </div>
+        <div class="name">
+          <p>YN Winnie handmade手繪手作</p>
+          <p>dontactcute</p>
         </div>
       </div>
-    </section>
-
-    <div class="line"></div>
-
-    <section class="service">
-      <div class="service-text">
-        <div class="title">
-          <h2>{{ "service.title" | translate }}</h2>
-        </div>
-        <ul class="content">
-          <li>
-            <strong>{{ "service.article.first.title" | translate }}</strong>
-            <p>
-              {{ "service.article.first.content" | translate }}
-            </p>
-          </li>
-          <li>
-            <strong>{{ "service.article.second.title" | translate }}</strong>
-            <p>
-              {{ "service.article.second.content" | translate }}
-            </p>
-          </li>
-          <li>
-            <strong>{{ "service.article.third.title" | translate }}</strong>
-            <p>
-              {{ "service.article.third.content" | translate }}
-            </p>
-          </li>
-        </ul>
-      </div>
-      <div class="service-pic">
-        <!-- <img loading="lazy" src="assets/image/service.jpg" alt="服務區照片" /> -->
-        <img loading="lazy" src="//wsrv.nl/?url=https://allenstu6311.github.io/cupWeb/assets/image/service.jpg" alt="服務區照片" loading="lazy" />
-      </div>
-    </section>
-
-    <div class="line"></div>
-
-    <section class="ig">
-      <div class="user">
-        <div class="user-info">
-          <div class="pic">
-            <a href="https://www.instagram.com/turtle.draw_/" target="_blank">
-              <img loading="lazy" src="assets/image/ig/mugshot.jpg" alt="ig大頭貼" />
-            </a>
-          </div>
-          <div class="name">
-            <h4>YN Winnie handmade手繪手作</h4>
-            <p>dontactcute</p>
-          </div>
-        </div>
-      </div>
-      <div class="photo">
-        <ul>
-          <li *ngFor="let pic of igPic">
-            <a href="https://www.instagram.com/turtle.draw_/" target="_blank">
-              <img loading="lazy" src="{{ pic }}" alt="ig相片" />
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="btn">
-        <button>{{ "ig.button" | translate }}</button>
-      </div>
-    </section>
-  </main>
+    </div>
+    <div class="photo">
+      <ul>
+        <li *ngFor="let pic of igPic">
+          <a href="https://www.instagram.com/turtle.draw_/" target="_blank">
+            <img loading="lazy" src="{{ pic }}" alt="ig相片" />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="btn">
+      <button>{{ "ig.button" | translate }}</button>
+    </div>
+  </section>
 </div>

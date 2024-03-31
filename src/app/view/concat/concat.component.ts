@@ -12,6 +12,7 @@ import {
 } from '@angular/forms';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import { HttpClient } from '@angular/common/http';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-concat',
@@ -30,10 +31,9 @@ export class ConcatComponent {
     private cdr: ChangeDetectorRef,
     private http: HttpClient
   ) {
-    this.http.get("/products/1")
-    .subscribe((res:any)=>{
-      console.log(res)
-    })
+    this.http.get('/products/1').subscribe((res: any) => {
+      console.log(res);
+    });
   }
 
   ngOnInit() {
@@ -43,20 +43,17 @@ export class ConcatComponent {
     //   lineId: [''],
     //   message: [''],
     // });
-    this.mailForm = this.fb.group(
-      {
-        name: new FormControl('', {
-          validators: [Validators.required],
-          updateOn:'blur'
-        }),
-        email: new FormControl('', {
-          validators: [Validators.required],
-        }),
-        lineId: new FormControl(''),
-        message: new FormControl(''),
-      },
-
-    );
+    this.mailForm = this.fb.group({
+      name: new FormControl('', {
+        validators: [Validators.required],
+        updateOn: 'blur',
+      }),
+      email: new FormControl('', {
+        validators: [Validators.required],
+      }),
+      lineId: new FormControl(''),
+      message: new FormControl(''),
+    });
   }
 
   sendEmail() {
@@ -79,23 +76,16 @@ export class ConcatComponent {
         })
         .then(
           () => {
-            console.log('SUCCESS!');
-            this.sendStatus = true;
-            this.showBox = true;
-            setTimeout(() => {
-              // Wait for the next cycle so the DOM is updated
-              this.lightBox.nativeElement.focus();
-            }, 1000);
+            Swal.fire({
+              title: '送出成功',
+              icon: 'success',
+            });
           },
           (error) => {
-            this.sendStatus = false;
-            this.showBox = true;
-            // this.lightBox.nativeElement.focus()
-            setTimeout(() => {
-              // Wait for the next cycle so the DOM is updated
-              this.lightBox.nativeElement.focus();
-            }, 1000);
-            console.log('FAILED...', (error as EmailJSResponseStatus).text);
+            Swal.fire({
+              title: '送出失敗',
+              icon: 'error',
+            });
           }
         );
     }

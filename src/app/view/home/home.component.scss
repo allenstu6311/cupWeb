@@ -89,6 +89,15 @@
         letter-spacing: 5px;
         line-height: 1.5;
         max-width: 1000px;
+
+        h2 {
+          font-size: 2.1em; /* 38px */
+          font-weight: bold;
+
+          @include mobile {
+            font-size: 1.5em;
+          }
+        }
       }
 
       .sub-title {
@@ -101,6 +110,12 @@
           h3 {
             text-align: left;
             letter-spacing: 5px;
+            font-size: 2.0625em; /* 33px */
+            font-weight: bold;
+
+            @include mobile {
+              font-size: 1.3em;
+            }
           }
         }
       }
@@ -173,7 +188,7 @@
       display: flex;
       justify-content: space-evenly;
 
-      @include tablet{
+      @include tablet {
         flex-wrap: wrap;
       }
 
@@ -191,7 +206,7 @@
       .pic {
         width: 45%;
 
-        @include tablet{
+        @include tablet {
           width: 100%;
           margin-bottom: 30px;
         }
@@ -244,22 +259,31 @@
   .service {
     display: flex;
 
-    @include tablet{
+    @include tablet {
       flex-wrap: wrap;
     }
 
     & > .service-text {
-      width: 50%;
+      padding: 10px;
+      width: 55%;
 
-      @include tablet{
+      @include tablet {
         width: 100%;
       }
 
       .title {
         text-align: center;
         margin-bottom: 30px;
+
+        h2 {
+          font-size: 2.1em; /* 38px */
+          font-weight: bold;
+
+          @include mobile {
+            font-size: 1.5em;
+          }
+        }
       }
-      
 
       .content {
         padding: 10px;
@@ -277,8 +301,9 @@
       }
     }
     & > .service-pic {
-      width: 50%;
-      @include tablet{
+      width: 45%;
+      padding: 10px;
+      @include tablet {
         width: 100%;
       }
     }
@@ -310,7 +335,7 @@
       ul {
         display: flex;
 
-        @include tablet{
+        @include tablet {
           flex-wrap: wrap;
         }
 
@@ -318,7 +343,7 @@
           width: 20%;
           height: 20%;
 
-          @include tablet{
+          @include tablet {
             width: 33%;
             height: 33%;
           }

@@ -14,3 +14,5 @@ npx ngh --dir=dist/cupWeb
 
 rx js 教學
 https://angular.io/guide/http-intercept-requests-and-responses
+
+ssh -R 80:localhost:4200 serveo.net
