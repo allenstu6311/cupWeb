@@ -1,0 +1,26 @@
+<div [class]="className">
+  <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide" *ngFor="let pic of picList">
+        <img loading="lazy" src="{{ pic }}" alt="" />
+      </div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination" *ngIf="swiperConfig.pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="prev-btn" *ngIf="swiperConfig.navigation"></div>
+    <div class="next-btn" *ngIf="swiperConfig.navigation"></div>
+
+    <div
+      class="swiper-button-prev control"
+      *ngIf="!swiperConfig.navigation"
+    ></div>
+    <div
+      class="swiper-button-next control"
+      *ngIf="!swiperConfig.navigation"
+    ></div>
+  </div>
+</div>

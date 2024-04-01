@@ -3,6 +3,7 @@
 @import "./assets/scss/common.scss";
 @import "./assets/scss/color.scss";
 @import "./assets/scss/swiper.scss";
+@import "./assets/scss/carousel.scss";
 
 // @font-face {
 //   font-family: Noto Sans TC;
@@ -93,6 +94,17 @@ section.banner {
       left: 0px;
       bottom: 0;
     }
+  }
+}
+
+.ng-fa-icon {
+  margin-right: 10px;
+}
+
+$height: ("50", "75", "100");
+@each $value in $height {
+  .h-#{$value} {
+    height: #{$value}px;
   }
 }
 

@@ -211,31 +211,7 @@
           margin-bottom: 30px;
         }
         position: relative;
-        .swiper-container {
-          overflow: hidden;
-          // overflow-x: hidden;
-          // overflow-y: unset;
-          position: relative;
 
-          .swiper-slide {
-            display: flex;
-            justify-content: center;
-
-            img {
-              width: 75%;
-            }
-          }
-
-          .control {
-            top: 50%;
-          }
-
-          .swiper-pagination {
-            position: absolute;
-            bottom: -1px;
-            background-color: #fff;
-          }
-        }
         // %control-btn {
         //   position: absolute;
         //   top: 65%;

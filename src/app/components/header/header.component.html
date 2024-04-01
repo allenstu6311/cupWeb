@@ -2,7 +2,7 @@
   <nav class="main-color">
     <div class="logo" tabindex="0">
       <div class="logo-pic">
-        <img routerLink="home" src="assets/image/winnie.png" alt="商標" />
+        <img routerLink="home" src="assets/image/winnie.png" alt="首頁商標" />
       </div>
     </div>
     <!-- 控制手機板選單 -->
@@ -24,10 +24,10 @@
         <a routerLink="about">{{ "header.about" | translate }}</a>
       </li>
       <li>
-        <a href="">{{ "header.portfolio" | translate }}</a>
+        <a routerLink="work">{{ "header.portfolio" | translate }}</a>
       </li>
       <li>
-        <a href="">{{ "header.course" | translate }}</a>
+        <a routerLink="course">{{ "header.course" | translate }}</a>
       </li>
       <li>
         <a routerLink="concat">{{ "header.contact" | translate }}</a>
@@ -128,4 +128,8 @@
   </nav>
 </header>
 <!-- 背景陰影 -->
-<div class="shadow" [hidden]="!openSiderBar" (click)="openSiderBar = false"></div>
+<div
+  class="shadow"
+  [hidden]="!openSiderBar"
+  (click)="openSiderBar = false"
+></div>

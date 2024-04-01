@@ -1,0 +1,26 @@
+// 首頁輪播圖
+.home-slide {
+  & .swiper-container {
+    overflow: hidden;
+    position: relative;
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 75%;
+      }
+    }
+
+    .control {
+      top: 50%;
+    }
+
+    .swiper-pagination {
+      position: absolute;
+      bottom: -1px;
+      background-color: #fff;
+    }
+  }
+}

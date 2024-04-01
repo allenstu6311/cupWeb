@@ -7,7 +7,11 @@
 //   z-index: -1;
 // }
 
-#main{
+#main {
   position: relative;
   z-index: 10;
+}
+
+#content {
+  min-height: 90vh;
 }

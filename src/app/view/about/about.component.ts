@@ -1,3 +1,4 @@
+import { faBusinessTime, faTrophy } from '@fortawesome/free-solid-svg-icons';
 import { Component } from '@angular/core';
 
 @Component({
@@ -5,4 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
 })
-export class AboutComponent {}
+export class AboutComponent {
+  faTrophy = faTrophy;
+  faBusinessTime = faBusinessTime;
+}

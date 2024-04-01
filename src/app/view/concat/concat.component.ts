@@ -13,6 +13,8 @@ import {
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import { HttpClient } from '@angular/common/http';
 import Swal from 'sweetalert2';
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-concat',
@@ -25,6 +27,9 @@ export class ConcatComponent {
   mailForm: FormGroup | any;
   sendStatus: boolean = false;
   showBox: boolean = false;
+  faPhone = faPhone;
+  faEnvelope = faEnvelope;
+  faFacebook = faFacebook;
 
   constructor(
     private fb: FormBuilder,

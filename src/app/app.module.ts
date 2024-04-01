@@ -34,6 +34,12 @@ import { SwiperDirective } from './swiper.directive';
 import { ServiceWorkerModule } from '@angular/service-worker';
 register();
 
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CourseComponent } from './view/course/course.component';
+import { WorkComponent } from './view/work/work.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 }
@@ -48,6 +54,9 @@ export function createTranslateLoader(http: HttpClient) {
     SelectComponent,
     ConcatComponent,
     SwiperDirective,
+    CourseComponent,
+    WorkComponent,
+    CarouselComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,6 +79,7 @@ export function createTranslateLoader(http: HttpClient) {
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000',
     }),
+    FontAwesomeModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: NoopInterceptor, multi: true },

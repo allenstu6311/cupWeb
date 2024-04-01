@@ -89,23 +89,13 @@
             {{ "post.content" | translate }}
           </p>
         </div>
-        <!-- Slider main container -->
-        <div class="swiper-container">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide" *ngFor="let pic of carousel">
-              <img loading="lazy" src="{{ pic }}" alt="" />
-            </div>
-          </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
-
-          <!-- If we need navigation buttons -->
-          <!-- <div class="prev-btn"></div>
-            <div class="next-btn"></div> -->
-          <div class="swiper-button-prev control"></div>
-          <div class="swiper-button-next control"></div>
+        <!-- 輪播圖 -->
+        <div>
+          <carousel
+            [className]="'home-slide'"
+            [picList]="carousel"
+            [swiperConfig]="swiperConfig"
+          ></carousel>
         </div>
       </div>
       <div class="pic">

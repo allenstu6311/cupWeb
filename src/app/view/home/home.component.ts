@@ -15,12 +15,6 @@ export class HomeComponent {
   @ViewChild('text', { static: true }) text!: ElementRef;
   @ViewChild('openAnimation', { static: true }) openAnimation!: ElementRef;
 
-  @ViewChild('swiper') swiper!: ElementRef<SwiperContainer>;
-  @ViewChild('swiperThumbs') swiperThumbs!: ElementRef<SwiperContainer>;
-
-  swiperComponent!: Swiper;
-
-  index: number = 0;
   display: boolean = false;
   igPic: string[] = [
     'assets/image/ig/ig_1.jpg',
@@ -44,34 +38,19 @@ export class HomeComponent {
     // });
   }
 
-  ngAfterViewInit() {
-    this.swiperComponent = new Swiper(
-      ".swiper-container",
-      this.swiperConfig
-    );
-    // this.swiperComponent.on('slideChange', (swiper: any) => {
-    //   console.log('swiper',swiper.activeIndex)
-    //   // this.index = swiper.detail[0].activeIndex;
-    // });
-  }
-
   // Swiper
   swiperConfig: SwiperOptions = {
     // spaceBetween:30,
-    scrollbar:false,
+    scrollbar: false,
     autoplay: {
       // delay: 2500,
       disableOnInteraction: false, // 點擊換頁也不會停止自動撥放
     },
     loop: true,
     // navigation: {
-    //   nextEl: '.next-btn',
-    //   prevEl: '.prev-btn',
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
     // },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
@@ -79,6 +58,4 @@ export class HomeComponent {
     },
     speed: 1000,
   };
-
-
 }

@@ -3,12 +3,15 @@
   .introduce {
     display: flex;
     align-items: center;
-    margin-top: 100px;
+    // margin-top: 100px;
     margin-bottom: 100px;
 
     ul li {
       margin-bottom: 40px;
       //   line-height: 30px;
+      p {
+        line-height: 20px;
+      }
     }
 
     .pic {
@@ -17,7 +20,7 @@
       justify-content: center;
 
       img {
-        width: 30%;
+        width: 60%;
         border-radius: 10px;
         transition: 0.5s;
         &:hover {
