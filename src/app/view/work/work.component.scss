@@ -1,0 +1,27 @@
+@import "assets/scss/common.scss";
+.content {
+  margin-top: 50px;
+  .describe {
+    margin-bottom: 30px;
+    line-height: 20px;
+    letter-spacing: 2px;
+  }
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    .left,
+    .right {
+      width: 50%;
+    }
+    .text li {
+      font-size: 1em;
+      line-height: 20px;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      color: $color3;
+    }
+  }
+}

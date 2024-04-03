@@ -39,6 +39,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CourseComponent } from './view/course/course.component';
 import { WorkComponent } from './view/work/work.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { MapComponent } from './view/map/map.component';
+
+import * as echarts from 'echarts';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -57,6 +61,7 @@ export function createTranslateLoader(http: HttpClient) {
     CourseComponent,
     WorkComponent,
     CarouselComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
@@ -80,6 +85,9 @@ export function createTranslateLoader(http: HttpClient) {
       registrationStrategy: 'registerWhenStable:30000',
     }),
     FontAwesomeModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts'),
+    }),
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: NoopInterceptor, multi: true },

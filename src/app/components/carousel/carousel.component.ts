@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { SwiperContainer } from 'swiper/element';
 import { SwiperOptions } from 'swiper/types';
 import { Swiper } from 'swiper';
@@ -12,11 +12,13 @@ export class CarouselComponent {
   @Input({ required: true }) picList: string[] = [''];
   @Input({ required: true }) swiperConfig: SwiperOptions | any;
   @Input() className: string = '';
+  @Input() id: string = '';
+  // @ViewChild('swiperInstance', { static: true }) swiperInstance: any;
   // @Input()
 
   swiperComponent!: Swiper;
 
   ngAfterViewInit() {
-    this.swiperComponent = new Swiper('.swiper-container', this.swiperConfig);
+    this.swiperComponent = new Swiper(`#${this.id}`, this.swiperConfig);
   }
 }
